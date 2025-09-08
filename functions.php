@@ -519,8 +519,8 @@ function arontara_add_product_rewrite_rules() {
 add_filter('query_vars', 'arontara_add_product_query_vars');
 
 function arontara_add_product_query_vars($vars) {
-    $vars[] = 'category_name';
-    $vars[] = 'product_id';
+    $vars[] = 'product_category';
+    $vars[] = 'product_name';
     return $vars;
 }
 
