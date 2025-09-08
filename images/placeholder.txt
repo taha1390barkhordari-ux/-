@@ -1,0 +1,53 @@
+# Images Directory
+This directory contains all website images.
+
+## Product Images
+All product images should be placed here with proper naming:
+- bearing.jpg
+- hydraulic-pump.jpg  
+- hydraulic-motor.jpg
+- industrial-fan.jpg
+- hydraulic-jack.jpg
+- coupling.jpg
+- heat-exchanger.jpg
+- hydraulic-filter.jpg
+- electric-motor.jpg
+- contactor.jpg
+- electronic-board.jpg
+- vibrometer.jpg
+- sensor.jpg
+- transformer.jpg
+- gearbox.jpg
+- thermometer.jpg
+- pressure-gauge.jpg
+- level-meter.jpg
+- control-valve.jpg
+- pressure-switch.jpg
+- level-transmitter.jpg
+- relay.jpg
+- spectrophotometer.jpg
+- turbidity-meter.jpg
+- bod-meter.jpg
+- cod-reactor.jpg
+- ph-meter.jpg
+- ec-meter.jpg
+- oxygen-meter.jpg
+- toc-analyzer.jpg
+- anionic-flocculant.jpg
+- cationic-flocculant.jpg
+- pax.jpg
+- mibc.jpg
+- titanium-dioxide.jpg
+- building-paint.jpg
+- industrial-paint.jpg
+- diluent.jpg
+
+## Slider Images
+- slider1.jpg (main company/products view)
+- slider2.jpg (chemical products focus)  
+- slider3.jpg (industrial partnerships)
+
+## Additional Images
+- logo.jpg
+- favicon.ico
+- apple-touch-icon.png
