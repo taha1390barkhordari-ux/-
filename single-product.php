@@ -1,461 +1,544 @@
-<?php
-/**
- * Single Product Page Template for Aron Tara
- * 
- * @package AronTara3D
- */
+<?php get_header(); ?>
 
-get_header();
-
-// Get product category and name from URL
-$request_uri = $_SERVER['REQUEST_URI'];
-$url_parts = explode('/', trim($request_uri, '/'));
-$product_category = isset($url_parts[1]) ? $url_parts[1] : '';
-$product_name = isset($url_parts[2]) ? $url_parts[2] : '';
-
-// Define comprehensive product data for all 33+ products
-$products_data = [
-    'mechanical' => [
-        'bearing' => [
-            'name' => 'بیرینگ‌های غلتکی و گلویی',
-            'category' => 'تجهیزات مکانیکی',
-            'image' => 'https://images.unsplash.com/photo-1581092918484-8313cb9fe2c3?w=800',
-            'gallery' => [
-                'https://images.unsplash.com/photo-1581092918484-8313cb9fe2c3?w=600',
-                'https://images.unsplash.com/photo-1582560869861-766136ce5c1c?w=600',
-                'https://images.unsplash.com/photo-1565106430482-8f6e74349ca1?w=600',
-            ],
-            'description' => 'انواع بیرینگ‌های صنعتی با کیفیت بالا برای ماشین‌آلات سنگین',
-            'features' => [
-                'مقاومت بالا در برابر فشار و حرارت',
-                'عمر مفید طولانی',
-                'مناسب برای شرایط کاری سخت',
-                'دارای گریس مخصوص',
-                'استاندارد بین‌المللی'
-            ],
-            'specifications' => [
-                'جنس' => 'فولاد کربنی و کرومی',
-                'مقاومت حرارتی' => 'تا 200 درجه سانتیگراد',
-                'سرعت دوران' => 'تا 3000 دور در دقیقه',
-                'گارانتی' => '2 سال',
-                'منشأ' => 'آلمان، ژاپن، چین'
-            ],
-            'applications' => [
-                'صنایع معدنی و فولادسازی',
-                'ماشین‌آلات سنگین',
-                'پمپ‌ها و کمپرسورها',
-                'موتورهای الکتریکی',
-                'تجهیزات نورد'
-            ]
-        ],
-        'hydraulic-pump' => [
-            'name' => 'پمپ‌های هیدرولیک صنعتی',
-            'category' => 'تجهیزات مکانیکی',
-            'image' => 'https://images.unsplash.com/photo-1581092795360-fd1ca04f0952?w=800',
-            'gallery' => [
-                'https://images.unsplash.com/photo-1581092795360-fd1ca04f0952?w=600',
-                'https://images.unsplash.com/photo-1565106430482-8f6e74349ca1?w=600',
-                'https://images.unsplash.com/photo-1504328345606-18bbc8c9d7d1?w=600'
-            ],
-            'description' => 'پمپ‌های هیدرولیک با فشار بالا برای کاربردهای صنعتی',
-            'features' => [
-                'فشار کاری تا 350 بار',
-                'راندمان بالا',
-                'عملکرد بی‌صدا',
-                'مقاوم در برابر خوردگی',
-                'قابلیت تنظیم فشار'
-            ],
-            'specifications' => [
-                'نوع' => 'پیستونی، دنده‌ای، پره‌ای',
-                'فشار کاری' => '50-350 بار',
-                'دبی' => '10-500 لیتر در دقیقه',
-                'توان' => '3-200 کیلووات',
-                'سیال کاری' => 'روغن هیدرولیک ISO VG32-68'
-            ],
-            'applications' => [
-                'پرس‌های هیدرولیک',
-                'جرثقیل‌های صنعتی',
-                'ماشین‌آلات راهسازی',
-                'تجهیزات معدنی',
-                'سیستم‌های مکانیزه'
-            ]
-        ],
-        'hydraulic-motor' => [
-            'name' => 'موتورهای هیدرولیک',
-            'category' => 'تجهیزات مکانیکی', 
-            'image' => 'https://images.unsplash.com/photo-1588702547919-26089e690ecc?w=800',
-            'gallery' => [
-                'https://images.unsplash.com/photo-1588702547919-26089e690ecc?w=600',
-                'https://images.unsplash.com/photo-1581092918484-8313cb9fe2c3?w=600',
-                'https://images.unsplash.com/photo-1504328345606-18bbc8c9d7d1?w=600'
-            ],
-            'description' => 'موتورهای هیدرولیک با گشتاور بالا برای کاربردهای سنگین',
-            'features' => [
-                'گشتاور بالا در سرعت کم',
-                'کنترل دقیق سرعت',
-                'عملکرد مطمئن',
-                'طراحی فشرده',
-                'نگهداری آسان'
-            ],
-            'specifications' => [
-                'نوع' => 'رادیال پیستونی، اکسیال پیستونی',
-                'گشتاور' => '100-50000 نیوتن متر',
-                'سرعت' => '10-3000 دور در دقیقه', 
-                'فشار ورودی' => 'تا 420 بار',
-                'بازده' => 'تا 95٪'
-            ],
-            'applications' => [
-                'سیستم‌های چرخش جرثقیل',
-                'محرک چرخ‌های حفاری',
-                'کنویر سنگین',
-                'تجهیزات کشاورزی',
-                'ماشین‌آلات معدنی'
-            ]
-        ]
-    ],
-    'electrical' => [
-        'electric-motor' => [
-            'name' => 'الکتروموتورهای سه‌فاز',
-            'category' => 'تجهیزات برقی',
-            'image' => 'https://images.unsplash.com/photo-1621905252507-b35492cc74b4?w=800',
-            'gallery' => [
-                'https://images.unsplash.com/photo-1621905252507-b35492cc74b4?w=600',
-                'https://images.unsplash.com/photo-1556075798-4825dfaaf498?w=600',
-                'https://images.unsplash.com/photo-1518709268805-4e9042af2176?w=600'
-            ],
-            'description' => 'موتورهای الکتریکی سه‌فاز با کیفیت بالا برای صنایع مختلف',
-            'features' => [
-                'راندمان بالای انرژی',
-                'ساخت مقاوم و بادوام',
-                'استارت آسان',
-                'کم‌صدا',
-                'قابلیت کار در شرایط سخت'
-            ],
-            'specifications' => [
-                'توان' => '0.25 - 500 کیلووات',
-                'ولتاژ' => '380/660 ولت',
-                'فرکانس' => '50/60 هرتز',
-                'سرعت' => '750-3000 دور در دقیقه',
-                'کلاس حفاظت' => 'IP55, IP56'
-            ],
-            'applications' => [
-                'پمپ‌های آب و فاضلاب',
-                'کمپرسورها',
-                'فن‌های صنعتی',
-                'کنویرها',
-                'ماشین‌آلات تولیدی'
-            ]
-        ],
-        'contactor' => [
-            'name' => 'کنتاکتورهای صنعتی',
-            'category' => 'تجهیزات برقی',
-            'image' => 'https://images.unsplash.com/photo-1556075798-4825dfaaf498?w=800',
-            'gallery' => [
-                'https://images.unsplash.com/photo-1556075798-4825dfaaf498?w=600',
-                'https://images.unsplash.com/photo-1621905252507-b35492cc74b4?w=600',
-                'https://images.unsplash.com/photo-1518709268805-4e9042af2176?w=600'
-            ],
-            'description' => 'کنتاکتورهای برقی برای کنترل موتورهای صنعتی',
-            'features' => [
-                'قابلیت قطع و وصل بار بالا',
-                'عمر تماس طولانی',
-                'مقاوم در برابر قوس الکتریکی',
-                'نصب آسان',
-                'استاندارد IEC'
-            ],
-            'specifications' => [
-                'جریان نامی' => '9A - 800A',
-                'ولتاژ کنترل' => '24V, 110V, 220V, 380V',
-                'توان تماس' => 'تا 500 کیلووات',
-                'تعداد قطب' => '3P, 4P',
-                'عمر مکانیکی' => '10 میلیون عمل'
-            ],
-            'applications' => [
-                'راه‌اندازی موتورها',
-                'کنترل روشنایی',
-                'تابلوهای برق',
-                'سیستم‌های اتوماسیون',
-                'تجهیزات HVAC'
-            ]
-        ]
-    ],
-    'instruments' => [
-        'thermometer' => [
-            'name' => 'حرارت‌سنج‌های صنعتی',
-            'category' => 'ابزار دقیق',
-            'image' => 'https://images.unsplash.com/photo-1584464491033-06628f3a6b7b?w=800',
-            'gallery' => [
-                'https://images.unsplash.com/photo-1584464491033-06628f3a6b7b?w=600',
-                'https://images.unsplash.com/photo-1576091160399-112ba8d25d1f?w=600',
-                'https://images.unsplash.com/photo-1559757148-5c350d0d3c56?w=600'
-            ],
-            'description' => 'حرارت‌سنج‌های دیجیتال و آنالوگ برای کاربردهای صنعتی',
-            'features' => [
-                'دقت اندازه‌گیری بالا',
-                'مقاوم در برابر ضربه',
-                'قابلیت کالیبراسیون',
-                'نمایشگر دیجیتال',
-                'خروجی آنالوگ و دیجیتال'
-            ],
-            'specifications' => [
-                'محدوده اندازه‌گیری' => '-50 تا +1200 درجه سانتیگراد',
-                'دقت' => '±0.1 درجه سانتیگراد',
-                'نوع سنسور' => 'PT100, Thermocouple',
-                'خروجی' => '4-20mA, 0-10V',
-                'نمایشگر' => 'LCD دیجیتال'
-            ],
-            'applications' => [
-                'کنترل فرآیند صنعتی',
-                'کوره‌ها و بخارزان‌ها',
-                'تانک‌های ذخیره',
-                'خطوط تولید غذا',
-                'سیستم‌های تهویه'
-            ]
-        ]
-    ],
-    'laboratory' => [
-        'spectrophotometer' => [
-            'name' => 'اسپکتروفتومتر UV-Vis',
-            'category' => 'تجهیزات آزمایشگاهی',
-            'image' => 'https://images.unsplash.com/photo-1582719471384-894fbb16e074?w=800',
-            'gallery' => [
-                'https://images.unsplash.com/photo-1582719471384-894fbb16e074?w=600',
-                'https://images.unsplash.com/photo-1576091160550-2173dba999ef?w=600',
-                'https://images.unsplash.com/photo-1559757175-0eb30cd8c063?w=600'
-            ],
-            'description' => 'دستگاه طیف‌سنجی UV-Vis برای تحلیل‌های شیمیایی دقیق',
-            'features' => [
-                'طیف پیوسته UV-Vis',
-                'نرم‌افزار تحلیل پیشرفته',
-                'خود کالیبراسیون',
-                'نمونه‌گیری خودکار',
-                'دقت طیف‌سنجی بالا'
-            ],
-            'specifications' => [
-                'محدوده طول موج' => '190-1100 نانومتر',
-                'وضوح طیفی' => '0.5 نانومتر',
-                'دقت فتومتری' => '±0.002 A',
-                'تکرارپذیری' => '±0.001 A',
-                'سرعت اسکن' => '12000 nm/min'
-            ],
-            'applications' => [
-                'تحلیل کیفی و کمی نمونه‌ها',
-                'آزمایشگاه‌های شیمی',
-                'کنترل کیفیت صنعتی',
-                'تحقیقات دانشگاهی',
-                'صنایع دارویی'
-            ]
-        ]
-    ],
-    'chemicals' => [
-        'anionic-flocculant' => [
-            'name' => 'فلوکولانت آنیونی',
-            'category' => 'مواد شیمیایی',
-            'image' => 'https://images.unsplash.com/photo-1559757148-5c350d0d3c56?w=800',
-            'gallery' => [
-                'https://images.unsplash.com/photo-1559757148-5c350d0d3c56?w=600',
-                'https://images.unsplash.com/photo-1582719471384-894fbb16e074?w=600',
-                'https://images.unsplash.com/photo-1581591524425-c7e0978865fc?w=600'
-            ],
-            'description' => 'پلی‌الکترولیت آنیونی برای تصفیه آب و فاضلاب صنعتی',
-            'features' => [
-                'وزن مولکولی بالا',
-                'درجه آنیونی قابل تنظیم',
-                'حلالیت سریع',
-                'کارایی بالا در pH مختلف',
-                'عدم سمیت'
-            ],
-            'specifications' => [
-                'شکل فیزیکی' => 'پودر سفید کریستالی',
-                'وزن مولکولی' => '5-20 میلیون دالتون',
-                'درجه آنیونی' => '10-40٪',
-                'pH کاربرد' => '6.5-8.5',
-                'حلالیت' => 'کامل در آب'
-            ],
-            'applications' => [
-                'تصفیه آب شهری',
-                'تصفیه فاضلاب صنعتی',
-                'صنایع کاغذسازی',
-                'استخراج مواد معدنی',
-                'تصفیه آب استخر'
-            ]
-        ]
-    ]
-];
-
-// Get current product data
-$current_product = null;
-if (isset($products_data[$product_category][$product_name])) {
-    $current_product = $products_data[$product_category][$product_name];
-} else {
-    // Redirect to 404 if product not found
-    global $wp_query;
-    $wp_query->set_404();
-    status_header(404);
-    get_template_part(404);
-    exit;
-}
-?>
-
-<!-- Single Product Page -->
-<section class="product-hero" style="background: var(--gradient-hero); padding: 120px 0 60px;">
+<div class="product-hero-section">
     <div class="container">
-        <nav class="breadcrumb fade-in">
+        <div class="breadcrumb-nav">
             <a href="<?php echo home_url(); ?>">خانه</a>
-            <span>/</span>
-            <a href="<?php echo home_url('/#products'); ?>">محصولات</a>
-            <span>/</span>
-            <span><?php echo esc_html($current_product['category']); ?></span>
-            <span>/</span>
-            <strong><?php echo esc_html($current_product['name']); ?></strong>
-        </nav>
-        
-        <div class="product-header fade-in">
-            <h1 class="product-title"><?php echo esc_html($current_product['name']); ?></h1>
-            <p class="product-category"><?php echo esc_html($current_product['category']); ?></p>
+            <span class="separator">/</span>
+            <a href="#products">محصولات</a>
+            <span class="separator">/</span>
+            <span class="current-page"><?php echo get_query_var('product_name'); ?></span>
         </div>
     </div>
-</section>
+</div>
 
-<section class="product-details">
+<main class="product-main">
     <div class="container">
         <div class="product-content">
-            <!-- Product Gallery -->
-            <div class="product-gallery fade-in">
+            <div class="product-gallery">
                 <div class="main-image">
-                    <img id="mainImage" src="<?php echo esc_url($current_product['image']); ?>" alt="<?php echo esc_attr($current_product['name']); ?>">
-                    <div class="image-overlay"></div>
+                    <img src="<?php echo get_template_directory_uri(); ?>/assets/images/products/product-placeholder.jpg" 
+                         alt="<?php echo get_query_var('product_name'); ?>" 
+                         id="mainProductImage">
                 </div>
-                
-                <div class="gallery-thumbs">
-                    <?php foreach ($current_product['gallery'] as $index => $image): ?>
-                        <img src="<?php echo esc_url($image); ?>" 
-                             alt="<?php echo esc_attr($current_product['name']); ?> - تصویر <?php echo $index + 1; ?>"
-                             onclick="changeMainImage(this.src)"
-                             class="thumb-image <?php echo $index === 0 ? 'active' : ''; ?>">
-                    <?php endforeach; ?>
+                <div class="product-thumbnails">
+                    <img src="<?php echo get_template_directory_uri(); ?>/assets/images/products/product-placeholder.jpg" 
+                         alt="نمای 1" 
+                         onclick="changeMainImage(this.src)">
+                    <img src="<?php echo get_template_directory_uri(); ?>/assets/images/products/product-placeholder.jpg" 
+                         alt="نمای 2" 
+                         onclick="changeMainImage(this.src)">
+                    <img src="<?php echo get_template_directory_uri(); ?>/assets/images/products/product-placeholder.jpg" 
+                         alt="نمای 3" 
+                         onclick="changeMainImage(this.src)">
                 </div>
             </div>
 
-            <!-- Product Info -->
-            <div class="product-info fade-in">
-                <div class="product-description">
-                    <h2>توضیحات محصول</h2>
-                    <p><?php echo esc_html($current_product['description']); ?></p>
+            <div class="product-info">
+                <h1 class="product-title" id="productTitle">
+                    <?php echo urldecode(get_query_var('product_name')); ?>
+                </h1>
+                
+                <div class="product-category">
+                    <span class="category-badge" id="productCategory">
+                        <?php echo urldecode(get_query_var('category_name')); ?>
+                    </span>
+                </div>
+
+                <div class="product-description" id="productDescription">
+                    <p>این محصول با کیفیت بالا و مطابق با استانداردهای بین‌المللی تولید شده است. برای دریافت اطلاعات کامل و مشاوره رایگان با ما تماس بگیرید.</p>
                 </div>
 
                 <div class="product-features">
-                    <h3>ویژگی‌ها</h3>
-                    <ul>
-                        <?php foreach ($current_product['features'] as $feature): ?>
-                            <li><?php echo esc_html($feature); ?></li>
-                        <?php endforeach; ?>
+                    <h3>ویژگی‌های محصول:</h3>
+                    <ul id="productFeatures">
+                        <li>کیفیت بالا و مقاوم</li>
+                        <li>مطابق با استانداردهای بین‌المللی</li>
+                        <li>گارانتی معتبر</li>
+                        <li>پشتیبانی فنی</li>
+                        <li>ارسال سریع</li>
                     </ul>
                 </div>
 
-                <div class="contact-section">
-                    <h3>درخواست قیمت و اطلاعات بیشتر</h3>
-                    <div class="contact-buttons">
-                        <a href="tel:09106168590" class="contact-btn phone-btn">
-                            <span class="icon">📞</span>
-                            تماس مستقیم: 09106168590
-                        </a>
-                        <a href="https://wa.me/989106168590" class="contact-btn whatsapp-btn" target="_blank">
-                            <span class="icon">💬</span>
-                            واتساپ
-                        </a>
-                        <a href="<?php echo home_url('/#contact'); ?>" class="contact-btn form-btn">
-                            <span class="icon">✉️</span>
-                            فرم تماس
-                        </a>
+                <div class="product-actions">
+                    <div class="price-inquiry">
+                        <p class="price-text">برای استعلام قیمت تماس بگیرید</p>
+                        <div class="contact-buttons">
+                            <a href="https://wa.me/989106168590?text=سلام، می‌خوام درباره محصول <?php echo urldecode(get_query_var('product_name')); ?> اطلاعات بیشتر بگیرم" 
+                               class="whatsapp-btn" 
+                               target="_blank">
+                                <i class="fab fa-whatsapp"></i>
+                                استعلام قیمت در واتساپ
+                            </a>
+                            <a href="tel:09106168590" class="call-btn">
+                                <i class="fas fa-phone"></i>
+                                تماس مستقیم
+                            </a>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
 
-        <!-- Technical Specifications -->
-        <div class="product-specs fade-in">
-            <h2>مشخصات فنی</h2>
-            <div class="specs-grid">
-                <?php foreach ($current_product['specifications'] as $spec => $value): ?>
-                    <div class="spec-item">
-                        <strong><?php echo esc_html($spec); ?>:</strong>
-                        <span><?php echo esc_html($value); ?></span>
-                    </div>
-                <?php endforeach; ?>
+        <div class="product-tabs">
+            <div class="tab-navigation">
+                <button class="tab-btn active" onclick="showTab('description')">توضیحات</button>
+                <button class="tab-btn" onclick="showTab('specifications')">مشخصات فنی</button>
+                <button class="tab-btn" onclick="showTab('applications')">کاربردها</button>
             </div>
-        </div>
 
-        <!-- Applications -->
-        <div class="product-applications fade-in">
-            <h2>کاربردها</h2>
-            <div class="applications-grid">
-                <?php foreach ($current_product['applications'] as $application): ?>
-                    <div class="application-item">
-                        <span class="checkmark">✓</span>
-                        <?php echo esc_html($application); ?>
-                    </div>
-                <?php endforeach; ?>
-            </div>
-        </div>
+            <div class="tab-content">
+                <div class="tab-panel active" id="description">
+                    <h3>توضیحات کامل محصول</h3>
+                    <p id="fullDescription">
+                        این محصول یکی از محصولات پرکاربرد و با کیفیت شرکت بازرگانی پارس ایده آل است. با سال‌ها تجربه در زمینه تأمین تجهیزات صنعتی، این محصول را به عنوان یکی از بهترین گزینه‌های موجود در بازار معرفی می‌کنیم.
+                    </p>
+                    <p>
+                        کیفیت بالا، قیمت مناسب و خدمات پس از فروش عالی از مزایای انتخاب این محصول است. برای مشاوره و راهنمایی بیشتر می‌توانید با تیم فروش ما در تماس باشید.
+                    </p>
+                </div>
 
-        <!-- Related Products -->
-        <div class="related-products fade-in">
-            <h2>محصولات مرتبط</h2>
-            <div class="related-grid">
-                <?php
-                $related_count = 0;
-                foreach ($products_data[$product_category] as $key => $product):
-                    if ($key !== $product_name && $related_count < 3):
-                        $related_count++;
-                ?>
-                    <div class="related-product-card">
-                        <div class="related-image" style="background-image: url('<?php echo esc_url($product['image']); ?>')"></div>
-                        <div class="related-info">
-                            <h4><?php echo esc_html($product['name']); ?></h4>
-                            <p><?php echo esc_html(wp_trim_words($product['description'], 15)); ?></p>
-                            <a href="<?php echo home_url('/product/' . $product_category . '/' . $key . '/'); ?>" class="related-btn">
-                                مشاهده جزئیات
-                            </a>
+                <div class="tab-panel" id="specifications">
+                    <h3>مشخصات فنی</h3>
+                    <div class="specs-grid" id="productSpecs">
+                        <div class="spec-item">
+                            <span class="spec-label">برند:</span>
+                            <span class="spec-value">متنوع</span>
+                        </div>
+                        <div class="spec-item">
+                            <span class="spec-label">کشور سازنده:</span>
+                            <span class="spec-value">متنوع</span>
+                        </div>
+                        <div class="spec-item">
+                            <span class="spec-label">گارانتی:</span>
+                            <span class="spec-value">طبق شرایط</span>
+                        </div>
+                        <div class="spec-item">
+                            <span class="spec-label">وضعیت:</span>
+                            <span class="spec-value">موجود</span>
                         </div>
                     </div>
-                <?php
-                    endif;
-                endforeach;
-                ?>
+                </div>
+
+                <div class="tab-panel" id="applications">
+                    <h3>کاربردها و استفاده‌ها</h3>
+                    <ul id="productApplications">
+                        <li>صنایع پتروشیمی</li>
+                        <li>صنایع فولاد</li>
+                        <li>صنایع برق</li>
+                        <li>صنایع آب و فاضلاب</li>
+                        <li>صنایع معدنی</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="related-products">
+            <h3>محصولات مرتبط</h3>
+            <div class="products-slider" id="relatedProducts">
+                <!-- محصولات مرتبط اینجا نمایش داده می‌شود -->
             </div>
         </div>
     </div>
-</section>
+</main>
+
+<div class="floating-contact">
+    <a href="https://wa.me/989106168590?text=سلام، سوال درباره محصول <?php echo urldecode(get_query_var('product_name')); ?> دارم" 
+       class="floating-whatsapp" 
+       target="_blank">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+</div>
+
+<style>
+/* رنگ‌های زیبا برای صفحه محصول */
+:root {
+    --primary-blue: #4A90E2;
+    --secondary-teal: #50C3A5;
+    --accent-purple: #9B59B6;
+    --warm-orange: #F39C12;
+    --success-green: #27AE60;
+    --deep-navy: #2C3E50;
+    --light-gray: #F8F9FA;
+    --medium-gray: #6C757D;
+    --gradient-1: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    --gradient-2: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+    --gradient-3: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+    --gradient-4: linear-gradient(135deg, #43e97b 0%, #38f9d7 100%);
+}
+
+.product-hero-section {
+    background: var(--gradient-1);
+    padding: 2rem 0;
+    margin-bottom: 2rem;
+}
+
+.breadcrumb-nav {
+    color: white;
+    font-size: 0.9rem;
+}
+
+.breadcrumb-nav a {
+    color: rgba(255,255,255,0.8);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.breadcrumb-nav a:hover {
+    color: white;
+}
+
+.separator {
+    margin: 0 0.5rem;
+    opacity: 0.6;
+}
+
+.current-page {
+    font-weight: 600;
+}
+
+.product-main {
+    padding: 2rem 0;
+}
+
+.product-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+    margin-bottom: 3rem;
+}
+
+.product-gallery {
+    position: sticky;
+    top: 2rem;
+    height: fit-content;
+}
+
+.main-image {
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 15px 35px rgba(74, 144, 226, 0.2);
+    margin-bottom: 1rem;
+}
+
+.main-image img {
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.main-image img:hover {
+    transform: scale(1.05);
+}
+
+.product-thumbnails {
+    display: flex;
+    gap: 0.5rem;
+    justify-content: center;
+}
+
+.product-thumbnails img {
+    width: 80px;
+    height: 80px;
+    object-fit: cover;
+    border-radius: 10px;
+    cursor: pointer;
+    border: 2px solid transparent;
+    transition: all 0.3s ease;
+}
+
+.product-thumbnails img:hover {
+    border-color: var(--primary-blue);
+    transform: translateY(-2px);
+}
+
+.product-title {
+    font-size: 2.2rem;
+    color: var(--deep-navy);
+    margin-bottom: 1rem;
+    font-weight: 700;
+}
+
+.category-badge {
+    display: inline-block;
+    background: var(--gradient-3);
+    color: white;
+    padding: 0.5rem 1rem;
+    border-radius: 25px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    margin-bottom: 1.5rem;
+}
+
+.product-description {
+    background: linear-gradient(135deg, #f8f9ff 0%, #e8f4fd 100%);
+    padding: 1.5rem;
+    border-radius: 15px;
+    margin-bottom: 2rem;
+    border-right: 4px solid var(--primary-blue);
+}
+
+.product-features {
+    margin-bottom: 2rem;
+}
+
+.product-features h3 {
+    color: var(--accent-purple);
+    margin-bottom: 1rem;
+    font-size: 1.3rem;
+}
+
+.product-features ul {
+    list-style: none;
+    padding: 0;
+}
+
+.product-features li {
+    padding: 0.5rem 0;
+    border-bottom: 1px solid rgba(74, 144, 226, 0.1);
+    position: relative;
+    padding-right: 1.5rem;
+}
+
+.product-features li:before {
+    content: '✓';
+    position: absolute;
+    right: 0;
+    color: var(--success-green);
+    font-weight: bold;
+}
+
+.product-actions {
+    background: var(--gradient-4);
+    padding: 2rem;
+    border-radius: 20px;
+    text-align: center;
+    box-shadow: 0 15px 35px rgba(67, 233, 123, 0.2);
+}
+
+.price-text {
+    font-size: 1.1rem;
+    color: var(--deep-navy);
+    margin-bottom: 1.5rem;
+    font-weight: 600;
+}
+
+.contact-buttons {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.whatsapp-btn, .call-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.8rem 1.5rem;
+    border-radius: 25px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+}
+
+.whatsapp-btn {
+    background: linear-gradient(135deg, #25D366 0%, #20B954 100%);
+    color: white;
+}
+
+.whatsapp-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 12px 25px rgba(37, 211, 102, 0.3);
+}
+
+.call-btn {
+    background: var(--gradient-2);
+    color: white;
+}
+
+.call-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 12px 25px rgba(240, 147, 251, 0.3);
+}
+
+.product-tabs {
+    margin-bottom: 3rem;
+}
+
+.tab-navigation {
+    display: flex;
+    gap: 0.5rem;
+    margin-bottom: 2rem;
+    border-bottom: 2px solid var(--light-gray);
+}
+
+.tab-btn {
+    background: none;
+    border: none;
+    padding: 1rem 1.5rem;
+    cursor: pointer;
+    font-weight: 600;
+    color: var(--medium-gray);
+    border-radius: 10px 10px 0 0;
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+.tab-btn.active {
+    color: var(--primary-blue);
+    background: var(--light-gray);
+}
+
+.tab-btn:hover {
+    background: rgba(74, 144, 226, 0.1);
+}
+
+.tab-panel {
+    display: none;
+    padding: 2rem;
+    background: white;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+}
+
+.tab-panel.active {
+    display: block;
+}
+
+.specs-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1rem;
+}
+
+.spec-item {
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem;
+    background: linear-gradient(135deg, #f8f9ff 0%, #e8f4fd 100%);
+    border-radius: 10px;
+    border-right: 3px solid var(--secondary-teal);
+}
+
+.spec-label {
+    font-weight: 600;
+    color: var(--deep-navy);
+}
+
+.spec-value {
+    color: var(--medium-gray);
+}
+
+.related-products h3 {
+    text-align: center;
+    color: var(--accent-purple);
+    margin-bottom: 2rem;
+    font-size: 1.8rem;
+}
+
+.floating-contact {
+    position: fixed;
+    bottom: 2rem;
+    left: 2rem;
+    z-index: 1000;
+}
+
+.floating-whatsapp {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 60px;
+    height: 60px;
+    background: linear-gradient(135deg, #25D366 0%, #20B954 100%);
+    color: white;
+    border-radius: 50%;
+    text-decoration: none;
+    font-size: 1.5rem;
+    box-shadow: 0 8px 25px rgba(37, 211, 102, 0.3);
+    animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.1); }
+    100% { transform: scale(1); }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .product-content {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+    
+    .product-title {
+        font-size: 1.8rem;
+    }
+    
+    .contact-buttons {
+        flex-direction: column;
+    }
+    
+    .tab-navigation {
+        overflow-x: auto;
+        white-space: nowrap;
+    }
+    
+    .specs-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .floating-contact {
+        bottom: 1rem;
+        left: 1rem;
+    }
+}
+</style>
 
 <script>
-document.addEventListener('DOMContentLoaded', function() {
-    // Initialize scroll animations
-    initScrollAnimations();
-});
-
+// تابع برای تغییر تصویر اصلی
 function changeMainImage(src) {
-    document.getElementById('mainImage').src = src;
-    
-    // Update active thumb
-    document.querySelectorAll('.thumb-image').forEach(thumb => {
-        thumb.classList.remove('active');
+    document.getElementById('mainProductImage').src = src;
+}
+
+// تابع برای تغییر تب‌ها
+function showTab(tabName) {
+    // پنهان کردن تمام تب‌ها
+    document.querySelectorAll('.tab-panel').forEach(panel => {
+        panel.classList.remove('active');
     });
+    
+    // حذف active از تمام دکمه‌ها
+    document.querySelectorAll('.tab-btn').forEach(btn => {
+        btn.classList.remove('active');
+    });
+    
+    // نمایش تب انتخابی
+    document.getElementById(tabName).classList.add('active');
+    
+    // اضافه کردن active به دکمه کلیک شده
     event.target.classList.add('active');
 }
 
-function initScrollAnimations() {
-    const observer = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                entry.target.classList.add('visible');
-            }
-        });
-    });
+// بارگذاری اطلاعات محصول از JavaScript
+document.addEventListener('DOMContentLoaded', function() {
+    loadProductData();
+    loadRelatedProducts();
+});
+
+function loadProductData() {
+    // اطلاعات محصول از main.js بارگذاری می‌شود
+    const productName = "<?php echo get_query_var('product_name'); ?>";
+    const categoryName = "<?php echo get_query_var('category_name'); ?>";
     
-    document.querySelectorAll('.fade-in').forEach(el => {
-        observer.observe(el);
-    });
+    // اینجا می‌توانید اطلاعات دقیق‌تر محصول را از پایگاه داده یا فایل JavaScript بارگذاری کنید
+}
+
+function loadRelatedProducts() {
+    const relatedContainer = document.getElementById('relatedProducts');
+    // محصولات مرتبط را اینجا بارگذاری می‌کنیم
 }
 </script>
 
