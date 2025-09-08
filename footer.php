@@ -19,7 +19,7 @@
                     <a href="https://t.me/arontara" target="_blank" aria-label="Telegram">
                         ✈️
                     </a>
-                    <a href="https://wa.me/989106168590" target="_blank" aria-label="WhatsApp">
+                    <a href="https://wa.me/+989106126859" target="_blank" aria-label="WhatsApp">
                         📱
                     </a>
                 </div>
@@ -135,7 +135,7 @@
     left: 20px;
     width: 50px;
     height: 50px;
-    background: linear-gradient(45deg, #4CAF50, #45a049);
+    background: var(--gradient-secondary);
     color: white;
     border: none;
     border-radius: 50%;
@@ -145,7 +145,7 @@
     visibility: hidden;
     transition: all 0.3s ease;
     z-index: 1000;
-    box-shadow: 0 4px 15px rgba(76, 175, 80, 0.3);
+    box-shadow: var(--shadow-glow-purple);
 }
 
 .back-to-top.visible {
