@@ -311,14 +311,14 @@ function initProducts() {
             { name: 'رله های حفاظتی', desc: 'رله های کنترل و حفاظت', img: '<?php echo get_template_directory_uri(); ?>/images/relay.jpg', link: '<?php echo home_url("/product/instruments/relay/"); ?>' }
         ],
         laboratory: [
-            { name: 'اسپکتروفتومتر', desc: 'دستگاه طیف سنجی UV-Vis', img: '<?php echo get_template_directory_uri(); ?>/images/spectrophotometer.jpg' },
-            { name: 'کدورت سنج', desc: 'اندازه گیری کدورت آب', img: '<?php echo get_template_directory_uri(); ?>/images/turbidity-meter.jpg' },
-            { name: 'BOD متر', desc: 'اندازه گیری اکسیژن خواهی بیولوژیک', img: '<?php echo get_template_directory_uri(); ?>/images/bod-meter.jpg' },
-            { name: 'راکتور COD', desc: 'دستگاه هضم COD', img: '<?php echo get_template_directory_uri(); ?>/images/cod-reactor.jpg' },
-            { name: 'pH متر', desc: 'اندازه گیری pH و اسیدیته', img: '<?php echo get_template_directory_uri(); ?>/images/ph-meter.jpg' },
-            { name: 'EC متر', desc: 'اندازه گیری هدایت الکتریکی', img: '<?php echo get_template_directory_uri(); ?>/images/ec-meter.jpg' },
-            { name: 'اکسیژن متر', desc: 'اندازه گیری اکسیژن محلول', img: '<?php echo get_template_directory_uri(); ?>/images/oxygen-meter.jpg' },
-            { name: 'TOC آنالایزر', desc: 'اندازه گیری کربن آلی کل', img: '<?php echo get_template_directory_uri(); ?>/images/toc-analyzer.jpg' }
+            { name: 'اسپکتروفتومتر', desc: 'دستگاه طیف سنجی UV-Vis', img: '<?php echo get_template_directory_uri(); ?>/images/spectrophotometer.jpg', link: '<?php echo home_url("/product/laboratory/spectrophotometer/"); ?>' },
+            { name: 'کدورت سنج', desc: 'اندازه گیری کدورت آب', img: '<?php echo get_template_directory_uri(); ?>/images/turbidity-meter.jpg', link: '<?php echo home_url("/product/laboratory/turbidity-meter/"); ?>' },
+            { name: 'BOD متر', desc: 'اندازه گیری اکسیژن خواهی بیولوژیک', img: '<?php echo get_template_directory_uri(); ?>/images/bod-meter.jpg', link: '<?php echo home_url("/product/laboratory/bod-meter/"); ?>' },
+            { name: 'راکتور COD', desc: 'دستگاه هضم COD', img: '<?php echo get_template_directory_uri(); ?>/images/cod-reactor.jpg', link: '<?php echo home_url("/product/laboratory/cod-reactor/"); ?>' },
+            { name: 'pH متر', desc: 'اندازه گیری pH و اسیدیته', img: '<?php echo get_template_directory_uri(); ?>/images/ph-meter.jpg', link: '<?php echo home_url("/product/laboratory/ph-meter/"); ?>' },
+            { name: 'EC متر', desc: 'اندازه گیری هدایت الکتریکی', img: '<?php echo get_template_directory_uri(); ?>/images/ec-meter.jpg', link: '<?php echo home_url("/product/laboratory/ec-meter/"); ?>' },
+            { name: 'اکسیژن متر', desc: 'اندازه گیری اکسیژن محلول', img: '<?php echo get_template_directory_uri(); ?>/images/oxygen-meter.jpg', link: '<?php echo home_url("/product/laboratory/oxygen-meter/"); ?>' },
+            { name: 'TOC آنالایزر', desc: 'اندازه گیری کربن آلی کل', img: '<?php echo get_template_directory_uri(); ?>/images/toc-analyzer.jpg', link: '<?php echo home_url("/product/laboratory/toc-analyzer/"); ?>' }
         ],
         chemicals: [
             { name: 'فلوکولانت آنیونی', desc: 'پلی الکترولیت برای تصفیه آب', img: '<?php echo get_template_directory_uri(); ?>/images/anionic-flocculant.jpg' },
