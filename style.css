@@ -79,12 +79,11 @@ html {
 
 body {
     font-family: 'Vazirmatn', 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
-    background: linear-gradient(135deg, #f8fafc 0%, #e0e7ff 50%, #fdf2f8 100%);
+    background: var(--dark-bg);
     color: var(--text-light);
     line-height: 1.7;
     direction: rtl;
     overflow-x: hidden;
-    min-height: 100vh;
 }
 
 /* Container */
@@ -100,9 +99,10 @@ body {
     top: 0;
     left: 0;
     right: 0;
-    background: rgba(15, 15, 35, 0.9);
+    background: rgba(255, 255, 255, 0.95);
     backdrop-filter: blur(20px);
     border-bottom: 1px solid var(--glass-border);
+    box-shadow: 0 2px 20px rgba(59, 130, 246, 0.1);
     z-index: 1000;
     padding: 1rem 0;
     transition: all 0.3s ease;
