@@ -526,7 +526,7 @@ function arontara_add_product_query_vars($vars) {
 
 // Template redirect for product pages
 function arontara_template_redirect() {
-    $category = get_query_var('product_category');
+    $category = get_query_var('category_name');
     $product_id = get_query_var('product_id');
     
     if ($category && $product_id) {
