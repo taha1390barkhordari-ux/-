@@ -321,14 +321,14 @@ function initProducts() {
             { name: 'TOC آنالایزر', desc: 'اندازه گیری کربن آلی کل', img: '<?php echo get_template_directory_uri(); ?>/images/toc-analyzer.jpg', link: '<?php echo home_url("/product/laboratory/toc-analyzer/"); ?>' }
         ],
         chemicals: [
-            { name: 'فلوکولانت آنیونی', desc: 'پلی الکترولیت برای تصفیه آب', img: '<?php echo get_template_directory_uri(); ?>/images/anionic-flocculant.jpg' },
-            { name: 'فلوکولانت کاتیونی', desc: 'پلی الکترولیت مثبت الشحنه', img: '<?php echo get_template_directory_uri(); ?>/images/cationic-flocculant.jpg' },
-            { name: 'پتانسیم امیل اگزانتات (PAX)', desc: 'منعقد کننده آب', img: '<?php echo get_template_directory_uri(); ?>/images/pax.jpg' },
-            { name: 'متیل ایزوبوتیل کربونیل (MIBC)', desc: 'کف کننده فرآیند فلوتاسیون', img: '<?php echo get_template_directory_uri(); ?>/images/mibc.jpg' },
-            { name: 'تیتانیوم دی اکسید', desc: 'رنگدانه سفید صنعتی', img: '<?php echo get_template_directory_uri(); ?>/images/titanium-dioxide.jpg' },
-            { name: 'رنگ ساختمانی', desc: 'رنگ های ساختمانی با کیفیت', img: '<?php echo get_template_directory_uri(); ?>/images/building-paint.jpg' },
-            { name: 'رنگ صنعتی', desc: 'رنگ های مقاوم صنعتی', img: '<?php echo get_template_directory_uri(); ?>/images/industrial-paint.jpg' },
-            { name: 'دایلوئنت', desc: 'حلال های صنعتی', img: '<?php echo get_template_directory_uri(); ?>/images/diluent.jpg' }
+            { name: 'فلوکولانت آنیونی', desc: 'پلی الکترولیت برای تصفیه آب', img: '<?php echo get_template_directory_uri(); ?>/images/anionic-flocculant.jpg', link: '<?php echo home_url("/product/chemicals/anionic-flocculant/"); ?>' },
+            { name: 'فلوکولانت کاتیونی', desc: 'پلی الکترولیت مثبت الشحنه', img: '<?php echo get_template_directory_uri(); ?>/images/cationic-flocculant.jpg', link: '<?php echo home_url("/product/chemicals/cationic-flocculant/"); ?>' },
+            { name: 'پتانسیم امیل اگزانتات (PAX)', desc: 'منعقد کننده آب', img: '<?php echo get_template_directory_uri(); ?>/images/pax.jpg', link: '<?php echo home_url("/product/chemicals/pax/"); ?>' },
+            { name: 'متیل ایزوبوتیل کربونیل (MIBC)', desc: 'کف کننده فرآیند فلوتاسیون', img: '<?php echo get_template_directory_uri(); ?>/images/mibc.jpg', link: '<?php echo home_url("/product/chemicals/mibc/"); ?>' },
+            { name: 'تیتانیوم دی اکسید', desc: 'رنگدانه سفید صنعتی', img: '<?php echo get_template_directory_uri(); ?>/images/titanium-dioxide.jpg', link: '<?php echo home_url("/product/chemicals/titanium-dioxide/"); ?>' },
+            { name: 'رنگ ساختمانی', desc: 'رنگ های ساختمانی با کیفیت', img: '<?php echo get_template_directory_uri(); ?>/images/building-paint.jpg', link: '<?php echo home_url("/product/chemicals/building-paint/"); ?>' },
+            { name: 'رنگ صنعتی', desc: 'رنگ های مقاوم صنعتی', img: '<?php echo get_template_directory_uri(); ?>/images/industrial-paint.jpg', link: '<?php echo home_url("/product/chemicals/industrial-paint/"); ?>' },
+            { name: 'دایلوئنت', desc: 'حلال های صنعتی', img: '<?php echo get_template_directory_uri(); ?>/images/diluent.jpg', link: '<?php echo home_url("/product/chemicals/diluent/"); ?>' }
         ]
     };
     
