@@ -34,7 +34,7 @@
                 <p><strong>تلفن:</strong> <a href="tel:034-32476351">034-32476351-2</a></p>
                 <p><strong>فکس:</strong> 034-32473605</p>
                 <p><strong>موبایل مدیرعامل:</strong><br>
-                <a href="tel:091061268590">091061268590</a></p>
+                <a href="tel:09106168590">09106168590</a></p>
             </div>
             
             <div class="footer-section">
