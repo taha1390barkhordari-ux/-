@@ -347,6 +347,7 @@ function initProducts() {
                 <div class="product-info">
                     <div class="product-title">${product.name}</div>
                     <div class="product-description">${product.desc}</div>
+                    <a href="${product.link}" class="product-btn">مشاهده جزئیات</a>
                 </div>
             `;
             productsContainer.appendChild(productCard);
