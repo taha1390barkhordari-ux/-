@@ -157,9 +157,8 @@ body {
     bottom: 0;
     left: 0;
     width: 0;
-    height: 3px;
-    background: var(--gradient-secondary);
-    border-radius: 2px;
+    height: 2px;
+    background: var(--gradient-primary);
     transition: width 0.3s ease;
 }
 
@@ -235,17 +234,18 @@ body {
 
 .cta-button {
     display: inline-block;
-    background: var(--gradient-primary);
+    background: var(--gradient-accent);
     color: white;
     text-decoration: none;
-    padding: 1rem 2.5rem;
+    padding: 1.2rem 3rem;
     border-radius: var(--radius-lg);
-    font-weight: 600;
+    font-weight: 700;
     font-size: 1.1rem;
-    transition: all 0.3s ease;
-    box-shadow: var(--shadow-glow);
+    transition: all 0.4s ease;
+    box-shadow: var(--shadow-glow-pink);
     position: relative;
     overflow: hidden;
+    border: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 .cta-button::before {
