@@ -13,7 +13,7 @@ $url_parts = explode('/', trim($request_uri, '/'));
 $product_category = isset($url_parts[1]) ? $url_parts[1] : '';
 $product_name = isset($url_parts[2]) ? $url_parts[2] : '';
 
-// Define product data
+// Define comprehensive product data for all 33+ products
 $products_data = [
     'mechanical' => [
         'bearing' => [
