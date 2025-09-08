@@ -496,10 +496,13 @@ section {
 
 .product-image {
     height: 200px;
-    background: var(--gradient-hero);
+    background: linear-gradient(135deg, #3b82f6, #a855f7);
     background-size: cover;
     background-position: center;
     position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .product-image::after {
