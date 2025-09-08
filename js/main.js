@@ -498,6 +498,51 @@ function getHomeUrl() {
     return window.homeUrl || '';
 }
 
+function getProductIcon(productName) {
+    const icons = {
+        'بیرینگ های غلتکی': 'cog',
+        'پمپ های هیدرولیک': 'tint',
+        'موتورهای هیدرولیک': 'engine',
+        'فن های صنعتی': 'fan',
+        'جک های هیدرولیک': 'wrench',
+        'کوپلینگ های هیدرولیک': 'link',
+        'مبدل های حرارتی': 'fire',
+        'فیلترهای هیدرولیک': 'filter',
+        'الکترو موتورها': 'bolt',
+        'کنتاکتورها': 'plug',
+        'کارت های الکترونیکی': 'microchip',
+        'ویبرومتر': 'wave-square',
+        'سنسورهای صنعتی': 'satellite-dish',
+        'ترانسفورماتور': 'battery-full',
+        'گیربکس الکتریکی': 'cogs',
+        'حرارت سنج ها': 'thermometer-half',
+        'فشارسنج ها': 'gauge-high',
+        'سطح سنج ها': 'level-up-alt',
+        'شیرهای کنترلی': 'valve',
+        'پرشر سوئیچ': 'toggle-on',
+        'لول ترانسمیتر': 'broadcast-tower',
+        'رله های حفاظتی': 'shield-alt',
+        'اسپکتروفتومتر': 'search',
+        'کدورت سنج': 'eye',
+        'BOD متر': 'flask',
+        'راکتور COD': 'vial',
+        'pH متر': 'balance-scale',
+        'EC متر': 'bolt',
+        'اکسیژن متر': 'lungs',
+        'TOC آنالایزر': 'atom',
+        'فلوکولانت آنیونی': 'tint',
+        'فلوکولانت کاتیونی': 'fill-drip',
+        'پتانسیم امیل اگزانتات (PAX)': 'capsules',
+        'متیل ایزوبوتیل کربونیل (MIBC)': 'spray-can',
+        'تیتانیوم دی اکسید': 'palette',
+        'رنگ ساختمانی': 'paint-brush',
+        'رنگ صنعتی': 'paint-roller',
+        'دایلوئنت': 'fill'
+    };
+    
+    return icons[productName] || 'industry';
+}
+
 // Export for WordPress integration
 if (typeof window !== 'undefined') {
     window.AronTaraTheme = {
