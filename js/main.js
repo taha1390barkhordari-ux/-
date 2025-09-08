@@ -97,13 +97,13 @@ function initializeProducts() {
             { name: 'فیلترهای هیدرولیک', desc: 'فیلترهای صنعتی و تعویضی', link: 'single-product.php?category=mechanical&product=hydraulic-filter' }
         ],
         electrical: [
-            { name: 'الکترو موتورها', desc: 'موتورهای الکتریکی سه فاز', img: getThemeUrl() + '/images/electric-motor.jpg', link: getHomeUrl() + '/product/electrical/electric-motor/' },
-            { name: 'کنتاکتورها', desc: 'کنتاکتورهای برقی صنعتی', img: getThemeUrl() + '/images/contactor.jpg', link: getHomeUrl() + '/product/electrical/contactor/' },
-            { name: 'کارت های الکترونیکی', desc: 'بردهای الکترونیکی صنعتی', img: getThemeUrl() + '/images/electronic-board.jpg', link: getHomeUrl() + '/product/electrical/electronic-board/' },
-            { name: 'ویبرومتر', desc: 'دستگاه های اندازه گیری ارتعاش', img: getThemeUrl() + '/images/vibrometer.jpg', link: getHomeUrl() + '/product/electrical/vibrometer/' },
-            { name: 'سنسورهای صنعتی', desc: 'انواع سنسورهای اتوماسیون', img: getThemeUrl() + '/images/sensor.jpg', link: getHomeUrl() + '/product/electrical/sensor/' },
-            { name: 'ترانسفورماتور', desc: 'ترانسفورماتورهای قدرت', img: getThemeUrl() + '/images/transformer.jpg', link: getHomeUrl() + '/product/electrical/transformer/' },
-            { name: 'گیربکس الکتریکی', desc: 'گیربکس های کاهنده دور', img: getThemeUrl() + '/images/gearbox.jpg', link: getHomeUrl() + '/product/electrical/gearbox/' }
+            { name: 'الکترو موتورها', desc: 'موتورهای الکتریکی سه فاز', link: 'single-product.php?category=electrical&product=electric-motor' },
+            { name: 'کنتاکتورها', desc: 'کنتاکتورهای برقی صنعتی', link: 'single-product.php?category=electrical&product=contactor' },
+            { name: 'کارت های الکترونیکی', desc: 'بردهای الکترونیکی صنعتی', link: 'single-product.php?category=electrical&product=electronic-board' },
+            { name: 'ویبرومتر', desc: 'دستگاه های اندازه گیری ارتعاش', link: 'single-product.php?category=electrical&product=vibrometer' },
+            { name: 'سنسورهای صنعتی', desc: 'انواع سنسورهای اتوماسیون', link: 'single-product.php?category=electrical&product=sensor' },
+            { name: 'ترانسفورماتور', desc: 'ترانسفورماتورهای قدرت', link: 'single-product.php?category=electrical&product=transformer' },
+            { name: 'گیربکس الکتریکی', desc: 'گیربکس های کاهنده دور', link: 'single-product.php?category=electrical&product=gearbox' }
         ],
         instruments: [
             { name: 'حرارت سنج ها', desc: 'ترمومترهای صنعتی دیجیتال', img: getThemeUrl() + '/images/thermometer.jpg', link: getHomeUrl() + '/product/instruments/thermometer/' },
