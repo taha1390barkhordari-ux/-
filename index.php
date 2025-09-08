@@ -302,23 +302,23 @@ function initProducts() {
             { name: 'گیربکس الکتریکی', desc: 'گیربکس های کاهنده دور', img: 'https://images.unsplash.com/photo-1504328345606-18bbc8c9d7d1?w=400', link: '<?php echo home_url("/product/electrical/gearbox/"); ?>' }
         ],
         instruments: [
-            { name: 'حرارت سنج ها', desc: 'ترمومترهای صنعتی دیجیتال', img: 'https://images.unsplash.com/photo-1584464491033-06628f3a6b7b?w=400', link: '<?php echo home_url("/product/instruments/thermometer/"); ?>' },
-            { name: 'فشارسنج ها', desc: 'مانومترهای دقیق صنعتی', img: 'https://images.unsplash.com/photo-1576091160550-2173dba999ef?w=400', link: '<?php echo home_url("/product/instruments/pressure-gauge/"); ?>' },
-            { name: 'سطح سنج ها', desc: 'ترانسمیترهای سطح مایعات', img: 'https://images.unsplash.com/photo-1559757175-0eb30cd8c063?w=400', link: '<?php echo home_url("/product/instruments/level-meter/"); ?>' },
-            { name: 'شیرهای کنترلی', desc: 'شیرهای اتوماتیک کنترل فرآیند', img: 'https://images.unsplash.com/photo-1581591524425-c7e0978865fc?w=400', link: '<?php echo home_url("/product/instruments/control-valve/"); ?>' },
-            { name: 'پرشر سوئیچ', desc: 'سوئیچ های فشار صنعتی', img: 'https://images.unsplash.com/photo-1559049297-692c2a30fb82?w=400', link: '<?php echo home_url("/product/instruments/pressure-switch/"); ?>' },
-            { name: 'لول ترانسمیتر', desc: 'فرستنده های سطح مایع', img: 'https://images.unsplash.com/photo-1584464491033-06628f3a6b7b?w=400', link: '<?php echo home_url("/product/instruments/level-transmitter/"); ?>' },
-            { name: 'رله های حفاظتی', desc: 'رله های کنترل و حفاظت', img: 'https://images.unsplash.com/photo-1518709268805-4e9042af2176?w=400', link: '<?php echo home_url("/product/instruments/relay/"); ?>' }
+            { name: 'حرارت سنج ها', desc: 'ترمومترهای صنعتی دیجیتال', img: '<?php echo get_template_directory_uri(); ?>/images/thermometer.jpg', link: '<?php echo home_url("/product/instruments/thermometer/"); ?>' },
+            { name: 'فشارسنج ها', desc: 'مانومترهای دقیق صنعتی', img: '<?php echo get_template_directory_uri(); ?>/images/pressure-gauge.jpg', link: '<?php echo home_url("/product/instruments/pressure-gauge/"); ?>' },
+            { name: 'سطح سنج ها', desc: 'ترانسمیترهای سطح مایعات', img: '<?php echo get_template_directory_uri(); ?>/images/level-meter.jpg', link: '<?php echo home_url("/product/instruments/level-meter/"); ?>' },
+            { name: 'شیرهای کنترلی', desc: 'شیرهای اتوماتیک کنترل فرآیند', img: '<?php echo get_template_directory_uri(); ?>/images/control-valve.jpg', link: '<?php echo home_url("/product/instruments/control-valve/"); ?>' },
+            { name: 'پرشر سوئیچ', desc: 'سوئیچ های فشار صنعتی', img: '<?php echo get_template_directory_uri(); ?>/images/pressure-switch.jpg', link: '<?php echo home_url("/product/instruments/pressure-switch/"); ?>' },
+            { name: 'لول ترانسمیتر', desc: 'فرستنده های سطح مایع', img: '<?php echo get_template_directory_uri(); ?>/images/level-transmitter.jpg', link: '<?php echo home_url("/product/instruments/level-transmitter/"); ?>' },
+            { name: 'رله های حفاظتی', desc: 'رله های کنترل و حفاظت', img: '<?php echo get_template_directory_uri(); ?>/images/relay.jpg', link: '<?php echo home_url("/product/instruments/relay/"); ?>' }
         ],
         laboratory: [
-            { name: 'اسپکتروفتومتر', desc: 'دستگاه طیف سنجی UV-Vis', img: '<?php echo get_template_directory_uri(); ?>/images/spectrophotometer.jpg', link: '<?php echo home_url("/product/laboratory/spectrophotometer/"); ?>' },
-            { name: 'کدورت سنج', desc: 'اندازه گیری کدورت آب', img: '<?php echo get_template_directory_uri(); ?>/images/turbidity-meter.jpg', link: '<?php echo home_url("/product/laboratory/turbidity-meter/"); ?>' },
-            { name: 'BOD متر', desc: 'اندازه گیری اکسیژن خواهی بیولوژیک', img: '<?php echo get_template_directory_uri(); ?>/images/bod-meter.jpg', link: '<?php echo home_url("/product/laboratory/bod-meter/"); ?>' },
-            { name: 'راکتور COD', desc: 'دستگاه هضم COD', img: '<?php echo get_template_directory_uri(); ?>/images/cod-reactor.jpg', link: '<?php echo home_url("/product/laboratory/cod-reactor/"); ?>' },
-            { name: 'pH متر', desc: 'اندازه گیری pH و اسیدیته', img: '<?php echo get_template_directory_uri(); ?>/images/ph-meter.jpg', link: '<?php echo home_url("/product/laboratory/ph-meter/"); ?>' },
-            { name: 'EC متر', desc: 'اندازه گیری هدایت الکتریکی', img: '<?php echo get_template_directory_uri(); ?>/images/ec-meter.jpg', link: '<?php echo home_url("/product/laboratory/ec-meter/"); ?>' },
-            { name: 'اکسیژن متر', desc: 'اندازه گیری اکسیژن محلول', img: '<?php echo get_template_directory_uri(); ?>/images/oxygen-meter.jpg', link: '<?php echo home_url("/product/laboratory/oxygen-meter/"); ?>' },
-            { name: 'TOC آنالایزر', desc: 'اندازه گیری کربن آلی کل', img: '<?php echo get_template_directory_uri(); ?>/images/toc-analyzer.jpg', link: '<?php echo home_url("/product/laboratory/toc-analyzer/"); ?>' }
+            { name: 'اسپکتروفتومتر', desc: 'دستگاه طیف سنجی UV-Vis', img: 'https://images.unsplash.com/photo-1582719471384-894fbb16e074?w=400', link: '<?php echo home_url("/product/laboratory/spectrophotometer/"); ?>' },
+            { name: 'کدورت سنج', desc: 'اندازه گیری کدورت آب', img: 'https://images.unsplash.com/photo-1576091160550-2173dba999ef?w=400', link: '<?php echo home_url("/product/laboratory/turbidity-meter/"); ?>' },
+            { name: 'BOD متر', desc: 'اندازه گیری اکسیژن خواهی بیولوژیک', img: 'https://images.unsplash.com/photo-1559757175-0eb30cd8c063?w=400', link: '<?php echo home_url("/product/laboratory/bod-meter/"); ?>' },
+            { name: 'راکتور COD', desc: 'دستگاه هضم COD', img: 'https://images.unsplash.com/photo-1584464491033-06628f3a6b7b?w=400', link: '<?php echo home_url("/product/laboratory/cod-reactor/"); ?>' },
+            { name: 'pH متر', desc: 'اندازه گیری pH و اسیدیته', img: 'https://images.unsplash.com/photo-1559049297-692c2a30fb82?w=400', link: '<?php echo home_url("/product/laboratory/ph-meter/"); ?>' },
+            { name: 'EC متر', desc: 'اندازه گیری هدایت الکتریکی', img: 'https://images.unsplash.com/photo-1576091160399-112ba8d25d1f?w=400', link: '<?php echo home_url("/product/laboratory/ec-meter/"); ?>' },
+            { name: 'اکسیژن متر', desc: 'اندازه گیری اکسیژن محلول', img: 'https://images.unsplash.com/photo-1518709268805-4e9042af2176?w=400', link: '<?php echo home_url("/product/laboratory/oxygen-meter/"); ?>' },
+            { name: 'TOC آنالایزر', desc: 'اندازه گیری کربن آلی کل', img: 'https://images.unsplash.com/photo-1559757148-5c350d0d3c56?w=400', link: '<?php echo home_url("/product/laboratory/toc-analyzer/"); ?>' }
         ],
         chemicals: [
             { name: 'فلوکولانت آنیونی', desc: 'پلی الکترولیت برای تصفیه آب', img: '<?php echo get_template_directory_uri(); ?>/images/anionic-flocculant.jpg', link: '<?php echo home_url("/product/chemicals/anionic-flocculant/"); ?>' },
