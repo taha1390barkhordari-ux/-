@@ -36,21 +36,21 @@ Version: 2.0
     --text-accent: #a855f7;
     
     /* Glass & Effects */
-    --glass-border: rgba(59, 130, 246, 0.3);
-    --mint-border: rgba(52, 211, 153, 0.4);
-    --shadow-blue: rgba(59, 130, 246, 0.15);
-    --shadow-purple: rgba(168, 85, 247, 0.15);
-    --shadow-pink: rgba(244, 114, 182, 0.15);
-    --shadow-mint: rgba(52, 211, 153, 0.15);
+    --glass-border: rgba(192, 132, 252, 0.25);
+    --mint-border: rgba(16, 185, 129, 0.3);
+    --shadow-blue: rgba(30, 64, 175, 0.35);
+    --shadow-purple: rgba(124, 58, 237, 0.3);
+    --shadow-pink: rgba(236, 72, 153, 0.25);
+    --shadow-mint: rgba(16, 185, 129, 0.2);
     
     /* Modern Gradients */
-    --gradient-primary: linear-gradient(135deg, #3b82f6, #a855f7, #f472b6);
-    --gradient-secondary: linear-gradient(135deg, #a855f7, #ddd6fe, #22d3ee);
-    --gradient-accent: linear-gradient(135deg, #f472b6, #fb7185, #34d399);
-    --gradient-hero: linear-gradient(135deg, #f8fafc, #e0e7ff, #ede9fe, #fdf2f8);
-    --gradient-card: linear-gradient(145deg, rgba(59, 130, 246, 0.12), rgba(168, 85, 247, 0.08));
-    --gradient-mint: linear-gradient(135deg, #34d399, #22d3ee);
-    --gradient-sunset: linear-gradient(135deg, #f472b6, #fb923c, #fbbf24);
+    --gradient-primary: linear-gradient(135deg, #1e40af, #7c3aed, #ec4899);
+    --gradient-secondary: linear-gradient(135deg, #7c3aed, #c084fc, #06b6d4);
+    --gradient-accent: linear-gradient(135deg, #ec4899, #f43f5e, #10b981);
+    --gradient-hero: linear-gradient(135deg, #0a0a15, #1e1b4b, #4c1d95, #ec4899);
+    --gradient-card: linear-gradient(145deg, rgba(30, 64, 175, 0.12), rgba(124, 58, 237, 0.08));
+    --gradient-mint: linear-gradient(135deg, #10b981, #06b6d4);
+    --gradient-sunset: linear-gradient(135deg, #ec4899, #f97316, #eab308);
     
     /* Border Radius */
     --radius-sm: 8px;
@@ -79,11 +79,12 @@ html {
 
 body {
     font-family: 'Vazirmatn', 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
-    background: var(--dark-bg);
+    background: linear-gradient(135deg, #f8fafc 0%, #e0e7ff 50%, #fdf2f8 100%);
     color: var(--text-light);
     line-height: 1.7;
     direction: rtl;
     overflow-x: hidden;
+    min-height: 100vh;
 }
 
 /* Container */
