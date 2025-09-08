@@ -115,24 +115,24 @@ function initializeProducts() {
             { name: 'رله های حفاظتی', desc: 'رله های کنترل و حفاظت', link: 'single-product.php?category=instruments&product=relay' }
         ],
         laboratory: [
-            { name: 'اسپکتروفتومتر', desc: 'دستگاه طیف سنجی UV-Vis', link: 'single-product.php?category=laboratory&product=spectrophotometer' },
-            { name: 'کدورت سنج', desc: 'اندازه گیری کدورت آب', link: 'single-product.php?category=laboratory&product=turbidity-meter' },
-            { name: 'BOD متر', desc: 'اندازه گیری اکسیژن خواهی بیولوژیک', link: 'single-product.php?category=laboratory&product=bod-meter' },
-            { name: 'راکتور COD', desc: 'دستگاه هضم COD', link: 'single-product.php?category=laboratory&product=cod-reactor' },
-            { name: 'pH متر', desc: 'اندازه گیری pH و اسیدیته', link: 'single-product.php?category=laboratory&product=ph-meter' },
-            { name: 'EC متر', desc: 'اندازه گیری هدایت الکتریکی', link: 'single-product.php?category=laboratory&product=ec-meter' },
-            { name: 'اکسیژن متر', desc: 'اندازه گیری اکسیژن محلول', link: 'single-product.php?category=laboratory&product=oxygen-meter' },
-            { name: 'TOC آنالایزر', desc: 'اندازه گیری کربن آلی کل', link: 'single-product.php?category=laboratory&product=toc-analyzer' }
+            { name: 'اسپکتروفتومتر', desc: 'دستگاه طیف سنجی UV-Vis', img: getThemeUrl() + '/images/spectrophotometer.jpg', link: getHomeUrl() + '/product/laboratory/spectrophotometer/' },
+            { name: 'کدورت سنج', desc: 'اندازه گیری کدورت آب', img: getThemeUrl() + '/images/turbidity-meter.jpg', link: getHomeUrl() + '/product/laboratory/turbidity-meter/' },
+            { name: 'BOD متر', desc: 'اندازه گیری اکسیژن خواهی بیولوژیک', img: getThemeUrl() + '/images/bod-meter.jpg', link: getHomeUrl() + '/product/laboratory/bod-meter/' },
+            { name: 'راکتور COD', desc: 'دستگاه هضم COD', img: getThemeUrl() + '/images/cod-reactor.jpg', link: getHomeUrl() + '/product/laboratory/cod-reactor/' },
+            { name: 'pH متر', desc: 'اندازه گیری pH و اسیدیته', img: getThemeUrl() + '/images/ph-meter.jpg', link: getHomeUrl() + '/product/laboratory/ph-meter/' },
+            { name: 'EC متر', desc: 'اندازه گیری هدایت الکتریکی', img: getThemeUrl() + '/images/ec-meter.jpg', link: getHomeUrl() + '/product/laboratory/ec-meter/' },
+            { name: 'اکسیژن متر', desc: 'اندازه گیری اکسیژن محلول', img: getThemeUrl() + '/images/oxygen-meter.jpg', link: getHomeUrl() + '/product/laboratory/oxygen-meter/' },
+            { name: 'TOC آنالایزر', desc: 'اندازه گیری کربن آلی کل', img: getThemeUrl() + '/images/toc-analyzer.jpg', link: getHomeUrl() + '/product/laboratory/toc-analyzer/' }
         ],
         chemicals: [
-            { name: 'فلوکولانت آنیونی', desc: 'پلی الکترولیت برای تصفیه آب', img: getThemeUrl() + '/images/anionic-flocculant.jpg', link: getHomeUrl() + '/product/chemicals/anionic-flocculant/' },
-            { name: 'فلوکولانت کاتیونی', desc: 'پلی الکترولیت مثبت الشحنه', img: getThemeUrl() + '/images/cationic-flocculant.jpg', link: getHomeUrl() + '/product/chemicals/cationic-flocculant/' },
-            { name: 'پتانسیم امیل اگزانتات (PAX)', desc: 'منعقد کننده آب', img: getThemeUrl() + '/images/pax.jpg', link: getHomeUrl() + '/product/chemicals/pax/' },
-            { name: 'متیل ایزوبوتیل کربونیل (MIBC)', desc: 'کف کننده فرآیند فلوتاسیون', img: getThemeUrl() + '/images/mibc.jpg', link: getHomeUrl() + '/product/chemicals/mibc/' },
-            { name: 'تیتانیوم دی اکسید', desc: 'رنگدانه سفید صنعتی', img: getThemeUrl() + '/images/titanium-dioxide.jpg', link: getHomeUrl() + '/product/chemicals/titanium-dioxide/' },
-            { name: 'رنگ ساختمانی', desc: 'رنگ های ساختمانی با کیفیت', img: getThemeUrl() + '/images/building-paint.jpg', link: getHomeUrl() + '/product/chemicals/building-paint/' },
-            { name: 'رنگ صنعتی', desc: 'رنگ های مقاوم صنعتی', img: getThemeUrl() + '/images/industrial-paint.jpg', link: getHomeUrl() + '/product/chemicals/industrial-paint/' },
-            { name: 'دایلوئنت', desc: 'حلال های صنعتی', img: getThemeUrl() + '/images/diluent.jpg', link: getHomeUrl() + '/product/chemicals/diluent/' }
+            { name: 'فلوکولانت آنیونی', desc: 'پلی الکترولیت برای تصفیه آب', link: 'single-product.php?category=chemicals&product=anionic-flocculant' },
+            { name: 'فلوکولانت کاتیونی', desc: 'پلی الکترولیت مثبت الشحنه', link: 'single-product.php?category=chemicals&product=cationic-flocculant' },
+            { name: 'پتانسیم امیل اگزانتات (PAX)', desc: 'منعقد کننده آب', link: 'single-product.php?category=chemicals&product=pax' },
+            { name: 'متیل ایزوبوتیل کربونیل (MIBC)', desc: 'کف کننده فرآیند فلوتاسیون', link: 'single-product.php?category=chemicals&product=mibc' },
+            { name: 'تیتانیوم دی اکسید', desc: 'رنگدانه سفید صنعتی', link: 'single-product.php?category=chemicals&product=titanium-dioxide' },
+            { name: 'رنگ ساختمانی', desc: 'رنگ های ساختمانی با کیفیت', link: 'single-product.php?category=chemicals&product=building-paint' },
+            { name: 'رنگ صنعتی', desc: 'رنگ های مقاوم صنعتی', link: 'single-product.php?category=chemicals&product=industrial-paint' },
+            { name: 'دایلوئنت', desc: 'حلال های صنعتی', link: 'single-product.php?category=chemicals&product=diluent' }
         ]
     };
     
