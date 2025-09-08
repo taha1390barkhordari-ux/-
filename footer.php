@@ -155,7 +155,7 @@
 
 .back-to-top:hover {
     transform: translateY(-3px);
-    box-shadow: var(--shadow-glow-pink);
+    box-shadow: 0 8px 25px rgba(76, 175, 80, 0.4);
 }
 
 /* Floating Contact Buttons */
@@ -184,11 +184,11 @@
 }
 
 .float-button.phone {
-    background: linear-gradient(45deg, #4CAF50, #45a049);
+    background: var(--gradient-primary);
 }
 
 .float-button.whatsapp {
-    background: linear-gradient(45deg, #25D366, #1ebe57);
+    background: var(--gradient-mint);
 }
 
 .float-button:hover {
