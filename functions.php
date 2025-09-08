@@ -510,7 +510,7 @@ add_action('init', 'arontara_add_product_rewrite_rules');
 function arontara_add_product_rewrite_rules() {
     add_rewrite_rule(
         '^product/([^/]+)/([^/]+)/?',
-        'index.php?category_name=$matches[1]&product_name=$matches[2]',
+        'index.php?product_category=$matches[1]&product_id=$matches[2]',
         'top'
     );
 }
@@ -519,7 +519,7 @@ function arontara_add_product_rewrite_rules() {
 add_filter('query_vars', 'arontara_add_product_query_vars');
 
 function arontara_add_product_query_vars($vars) {
-    $vars[] = 'product_category';
+    $vars[] = 'category_name';
     $vars[] = 'product_id';
     return $vars;
 }
