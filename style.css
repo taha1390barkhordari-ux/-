@@ -328,7 +328,7 @@ section {
 
 /* About Section */
 .about-section {
-    background: linear-gradient(135deg, rgba(248, 250, 252, 0.95), rgba(224, 231, 255, 0.8));
+    background: linear-gradient(135deg, rgba(15, 15, 35, 0.8), rgba(30, 27, 75, 0.4));
 }
 
 .about-content {
@@ -439,7 +439,8 @@ section {
 
 /* Products Section */
 .products-section {
-    background: var(--darker-bg);
+    background: linear-gradient(135deg, #f8fafc, #e0e7ff, #fdf2f8);
+    padding: 4rem 0;
 }
 
 .products-tabs {
