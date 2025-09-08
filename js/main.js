@@ -85,11 +85,422 @@ function initializeSlider() {
 
 // Enhanced Products System with better transitions
 function initializeProducts() {
-    const products = {\n        mechanical: [\n            { name: 'بیرینگ های غلتکی', desc: 'تامین و تعمیر انواع بیرینگ های صنعتی', img: getThemeUrl() + '/images/bearing.jpg', link: getHomeUrl() + '/product/mechanical/bearing/' },\n            { name: 'پمپ های هیدرولیک', desc: 'پمپ های هیدرولیک و لوازم یدکی', img: getThemeUrl() + '/images/hydraulic-pump.jpg', link: getHomeUrl() + '/product/mechanical/hydraulic-pump/' },\n            { name: 'موتورهای هیدرولیک', desc: 'موتورهای هیدرولیک و قطعات جانبی', img: getThemeUrl() + '/images/hydraulic-motor.jpg', link: getHomeUrl() + '/product/mechanical/hydraulic-motor/' },\n            { name: 'فن های صنعتی', desc: 'انواع فن های صنعتی و تهویه', img: getThemeUrl() + '/images/industrial-fan.jpg', link: getHomeUrl() + '/product/mechanical/industrial-fan/' },\n            { name: 'جک های هیدرولیک', desc: 'جک های هیدرولیک و لوازم یدکی', img: getThemeUrl() + '/images/hydraulic-jack.jpg', link: getHomeUrl() + '/product/mechanical/hydraulic-jack/' },\n            { name: 'کوپلینگ های هیدرولیک', desc: 'کوپلینگ ها و اتصالات هیدرولیک', img: getThemeUrl() + '/images/coupling.jpg', link: getHomeUrl() + '/product/mechanical/coupling/' },\n            { name: 'مبدل های حرارتی', desc: 'مبدل های حرارتی تیوب و پلیت', img: getThemeUrl() + '/images/heat-exchanger.jpg', link: getHomeUrl() + '/product/mechanical/heat-exchanger/' },\n            { name: 'فیلترهای هیدرولیک', desc: 'فیلترهای صنعتی و تعویضی', img: getThemeUrl() + '/images/hydraulic-filter.jpg', link: getHomeUrl() + '/product/mechanical/hydraulic-filter/' }\n        ],\n        electrical: [\n            { name: 'الکترو موتورها', desc: 'موتورهای الکتریکی سه فاز', img: getThemeUrl() + '/images/electric-motor.jpg', link: getHomeUrl() + '/product/electrical/electric-motor/' },\n            { name: 'کنتاکتورها', desc: 'کنتاکتورهای برقی صنعتی', img: getThemeUrl() + '/images/contactor.jpg', link: getHomeUrl() + '/product/electrical/contactor/' },\n            { name: 'کارت های الکترونیکی', desc: 'بردهای الکترونیکی صنعتی', img: getThemeUrl() + '/images/electronic-board.jpg', link: getHomeUrl() + '/product/electrical/electronic-board/' },\n            { name: 'ویبرومتر', desc: 'دستگاه های اندازه گیری ارتعاش', img: getThemeUrl() + '/images/vibrometer.jpg', link: getHomeUrl() + '/product/electrical/vibrometer/' },\n            { name: 'سنسورهای صنعتی', desc: 'انواع سنسورهای اتوماسیون', img: getThemeUrl() + '/images/sensor.jpg', link: getHomeUrl() + '/product/electrical/sensor/' },\n            { name: 'ترانسفورماتور', desc: 'ترانسفورماتورهای قدرت', img: getThemeUrl() + '/images/transformer.jpg', link: getHomeUrl() + '/product/electrical/transformer/' },\n            { name: 'گیربکس الکتریکی', desc: 'گیربکس های کاهنده دور', img: getThemeUrl() + '/images/gearbox.jpg', link: getHomeUrl() + '/product/electrical/gearbox/' }\n        ],\n        instruments: [\n            { name: 'حرارت سنج ها', desc: 'ترمومترهای صنعتی دیجیتال', img: getThemeUrl() + '/images/thermometer.jpg', link: getHomeUrl() + '/product/instruments/thermometer/' },\n            { name: 'فشارسنج ها', desc: 'مانومترهای دقیق صنعتی', img: getThemeUrl() + '/images/pressure-gauge.jpg', link: getHomeUrl() + '/product/instruments/pressure-gauge/' },\n            { name: 'سطح سنج ها', desc: 'ترانسمیترهای سطح مایعات', img: getThemeUrl() + '/images/level-meter.jpg', link: getHomeUrl() + '/product/instruments/level-meter/' },\n            { name: 'شیرهای کنترلی', desc: 'شیرهای اتوماتیک کنترل فرآیند', img: getThemeUrl() + '/images/control-valve.jpg', link: getHomeUrl() + '/product/instruments/control-valve/' },\n            { name: 'پرشر سوئیچ', desc: 'سوئیچ های فشار صنعتی', img: getThemeUrl() + '/images/pressure-switch.jpg', link: getHomeUrl() + '/product/instruments/pressure-switch/' },\n            { name: 'لول ترانسمیتر', desc: 'فرستنده های سطح مایع', img: getThemeUrl() + '/images/level-transmitter.jpg', link: getHomeUrl() + '/product/instruments/level-transmitter/' },\n            { name: 'رله های حفاظتی', desc: 'رله های کنترل و حفاظت', img: getThemeUrl() + '/images/relay.jpg', link: getHomeUrl() + '/product/instruments/relay/' }\n        ],\n        laboratory: [\n            { name: 'اسپکتروفتومتر', desc: 'دستگاه طیف سنجی UV-Vis', img: getThemeUrl() + '/images/spectrophotometer.jpg', link: getHomeUrl() + '/product/laboratory/spectrophotometer/' },\n            { name: 'کدورت سنج', desc: 'اندازه گیری کدورت آب', img: getThemeUrl() + '/images/turbidity-meter.jpg', link: getHomeUrl() + '/product/laboratory/turbidity-meter/' },\n            { name: 'BOD متر', desc: 'اندازه گیری اکسیژن خواهی بیولوژیک', img: getThemeUrl() + '/images/bod-meter.jpg', link: getHomeUrl() + '/product/laboratory/bod-meter/' },\n            { name: 'راکتور COD', desc: 'دستگاه هضم COD', img: getThemeUrl() + '/images/cod-reactor.jpg', link: getHomeUrl() + '/product/laboratory/cod-reactor/' },\n            { name: 'pH متر', desc: 'اندازه گیری pH و اسیدیته', img: getThemeUrl() + '/images/ph-meter.jpg', link: getHomeUrl() + '/product/laboratory/ph-meter/' },\n            { name: 'EC متر', desc: 'اندازه گیری هدایت الکتریکی', img: getThemeUrl() + '/images/ec-meter.jpg', link: getHomeUrl() + '/product/laboratory/ec-meter/' },\n            { name: 'اکسیژن متر', desc: 'اندازه گیری اکسیژن محلول', img: getThemeUrl() + '/images/oxygen-meter.jpg', link: getHomeUrl() + '/product/laboratory/oxygen-meter/' },\n            { name: 'TOC آنالایزر', desc: 'اندازه گیری کربن آلی کل', img: getThemeUrl() + '/images/toc-analyzer.jpg', link: getHomeUrl() + '/product/laboratory/toc-analyzer/' }\n        ],\n        chemicals: [\n            { name: 'فلوکولانت آنیونی', desc: 'پلی الکترولیت برای تصفیه آب', img: getThemeUrl() + '/images/anionic-flocculant.jpg', link: getHomeUrl() + '/product/chemicals/anionic-flocculant/' },\n            { name: 'فلوکولانت کاتیونی', desc: 'پلی الکترولیت مثبت الشحنه', img: getThemeUrl() + '/images/cationic-flocculant.jpg', link: getHomeUrl() + '/product/chemicals/cationic-flocculant/' },\n            { name: 'پتانسیم امیل اگزانتات (PAX)', desc: 'منعقد کننده آب', img: getThemeUrl() + '/images/pax.jpg', link: getHomeUrl() + '/product/chemicals/pax/' },\n            { name: 'متیل ایزوبوتیل کربونیل (MIBC)', desc: 'کف کننده فرآیند فلوتاسیون', img: getThemeUrl() + '/images/mibc.jpg', link: getHomeUrl() + '/product/chemicals/mibc/' },\n            { name: 'تیتانیوم دی اکسید', desc: 'رنگدانه سفید صنعتی', img: getThemeUrl() + '/images/titanium-dioxide.jpg', link: getHomeUrl() + '/product/chemicals/titanium-dioxide/' },\n            { name: 'رنگ ساختمانی', desc: 'رنگ های ساختمانی با کیفیت', img: getThemeUrl() + '/images/building-paint.jpg', link: getHomeUrl() + '/product/chemicals/building-paint/' },\n            { name: 'رنگ صنعتی', desc: 'رنگ های مقاوم صنعتی', img: getThemeUrl() + '/images/industrial-paint.jpg', link: getHomeUrl() + '/product/chemicals/industrial-paint/' },\n            { name: 'دایلوئنت', desc: 'حلال های صنعتی', img: getThemeUrl() + '/images/diluent.jpg', link: getHomeUrl() + '/product/chemicals/diluent/' }\n        ]\n    };
+    const products = {
+        mechanical: [
+            { name: 'بیرینگ های غلتکی', desc: 'تامین و تعمیر انواع بیرینگ های صنعتی', img: getThemeUrl() + '/images/bearing.jpg', link: getHomeUrl() + '/product/mechanical/bearing/' },
+            { name: 'پمپ های هیدرولیک', desc: 'پمپ های هیدرولیک و لوازم یدکی', img: getThemeUrl() + '/images/hydraulic-pump.jpg', link: getHomeUrl() + '/product/mechanical/hydraulic-pump/' },
+            { name: 'موتورهای هیدرولیک', desc: 'موتورهای هیدرولیک و قطعات جانبی', img: getThemeUrl() + '/images/hydraulic-motor.jpg', link: getHomeUrl() + '/product/mechanical/hydraulic-motor/' },
+            { name: 'فن های صنعتی', desc: 'انواع فن های صنعتی و تهویه', img: getThemeUrl() + '/images/industrial-fan.jpg', link: getHomeUrl() + '/product/mechanical/industrial-fan/' },
+            { name: 'جک های هیدرولیک', desc: 'جک های هیدرولیک و لوازم یدکی', img: getThemeUrl() + '/images/hydraulic-jack.jpg', link: getHomeUrl() + '/product/mechanical/hydraulic-jack/' },
+            { name: 'کوپلینگ های هیدرولیک', desc: 'کوپلینگ ها و اتصالات هیدرولیک', img: getThemeUrl() + '/images/coupling.jpg', link: getHomeUrl() + '/product/mechanical/coupling/' },
+            { name: 'مبدل های حرارتی', desc: 'مبدل های حرارتی تیوب و پلیت', img: getThemeUrl() + '/images/heat-exchanger.jpg', link: getHomeUrl() + '/product/mechanical/heat-exchanger/' },
+            { name: 'فیلترهای هیدرولیک', desc: 'فیلترهای صنعتی و تعویضی', img: getThemeUrl() + '/images/hydraulic-filter.jpg', link: getHomeUrl() + '/product/mechanical/hydraulic-filter/' }
+        ],
+        electrical: [
+            { name: 'الکترو موتورها', desc: 'موتورهای الکتریکی سه فاز', img: getThemeUrl() + '/images/electric-motor.jpg', link: getHomeUrl() + '/product/electrical/electric-motor/' },
+            { name: 'کنتاکتورها', desc: 'کنتاکتورهای برقی صنعتی', img: getThemeUrl() + '/images/contactor.jpg', link: getHomeUrl() + '/product/electrical/contactor/' },
+            { name: 'کارت های الکترونیکی', desc: 'بردهای الکترونیکی صنعتی', img: getThemeUrl() + '/images/electronic-board.jpg', link: getHomeUrl() + '/product/electrical/electronic-board/' },
+            { name: 'ویبرومتر', desc: 'دستگاه های اندازه گیری ارتعاش', img: getThemeUrl() + '/images/vibrometer.jpg', link: getHomeUrl() + '/product/electrical/vibrometer/' },
+            { name: 'سنسورهای صنعتی', desc: 'انواع سنسورهای اتوماسیون', img: getThemeUrl() + '/images/sensor.jpg', link: getHomeUrl() + '/product/electrical/sensor/' },
+            { name: 'ترانسفورماتور', desc: 'ترانسفورماتورهای قدرت', img: getThemeUrl() + '/images/transformer.jpg', link: getHomeUrl() + '/product/electrical/transformer/' },
+            { name: 'گیربکس الکتریکی', desc: 'گیربکس های کاهنده دور', img: getThemeUrl() + '/images/gearbox.jpg', link: getHomeUrl() + '/product/electrical/gearbox/' }
+        ],
+        instruments: [
+            { name: 'حرارت سنج ها', desc: 'ترمومترهای صنعتی دیجیتال', img: getThemeUrl() + '/images/thermometer.jpg', link: getHomeUrl() + '/product/instruments/thermometer/' },
+            { name: 'فشارسنج ها', desc: 'مانومترهای دقیق صنعتی', img: getThemeUrl() + '/images/pressure-gauge.jpg', link: getHomeUrl() + '/product/instruments/pressure-gauge/' },
+            { name: 'سطح سنج ها', desc: 'ترانسمیترهای سطح مایعات', img: getThemeUrl() + '/images/level-meter.jpg', link: getHomeUrl() + '/product/instruments/level-meter/' },
+            { name: 'شیرهای کنترلی', desc: 'شیرهای اتوماتیک کنترل فرآیند', img: getThemeUrl() + '/images/control-valve.jpg', link: getHomeUrl() + '/product/instruments/control-valve/' },
+            { name: 'پرشر سوئیچ', desc: 'سوئیچ های فشار صنعتی', img: getThemeUrl() + '/images/pressure-switch.jpg', link: getHomeUrl() + '/product/instruments/pressure-switch/' },
+            { name: 'لول ترانسمیتر', desc: 'فرستنده های سطح مایع', img: getThemeUrl() + '/images/level-transmitter.jpg', link: getHomeUrl() + '/product/instruments/level-transmitter/' },
+            { name: 'رله های حفاظتی', desc: 'رله های کنترل و حفاظت', img: getThemeUrl() + '/images/relay.jpg', link: getHomeUrl() + '/product/instruments/relay/' }
+        ],
+        laboratory: [
+            { name: 'اسپکتروفتومتر', desc: 'دستگاه طیف سنجی UV-Vis', img: getThemeUrl() + '/images/spectrophotometer.jpg', link: getHomeUrl() + '/product/laboratory/spectrophotometer/' },
+            { name: 'کدورت سنج', desc: 'اندازه گیری کدورت آب', img: getThemeUrl() + '/images/turbidity-meter.jpg', link: getHomeUrl() + '/product/laboratory/turbidity-meter/' },
+            { name: 'BOD متر', desc: 'اندازه گیری اکسیژن خواهی بیولوژیک', img: getThemeUrl() + '/images/bod-meter.jpg', link: getHomeUrl() + '/product/laboratory/bod-meter/' },
+            { name: 'راکتور COD', desc: 'دستگاه هضم COD', img: getThemeUrl() + '/images/cod-reactor.jpg', link: getHomeUrl() + '/product/laboratory/cod-reactor/' },
+            { name: 'pH متر', desc: 'اندازه گیری pH و اسیدیته', img: getThemeUrl() + '/images/ph-meter.jpg', link: getHomeUrl() + '/product/laboratory/ph-meter/' },
+            { name: 'EC متر', desc: 'اندازه گیری هدایت الکتریکی', img: getThemeUrl() + '/images/ec-meter.jpg', link: getHomeUrl() + '/product/laboratory/ec-meter/' },
+            { name: 'اکسیژن متر', desc: 'اندازه گیری اکسیژن محلول', img: getThemeUrl() + '/images/oxygen-meter.jpg', link: getHomeUrl() + '/product/laboratory/oxygen-meter/' },
+            { name: 'TOC آنالایزر', desc: 'اندازه گیری کربن آلی کل', img: getThemeUrl() + '/images/toc-analyzer.jpg', link: getHomeUrl() + '/product/laboratory/toc-analyzer/' }
+        ],
+        chemicals: [
+            { name: 'فلوکولانت آنیونی', desc: 'پلی الکترولیت برای تصفیه آب', img: getThemeUrl() + '/images/anionic-flocculant.jpg', link: getHomeUrl() + '/product/chemicals/anionic-flocculant/' },
+            { name: 'فلوکولانت کاتیونی', desc: 'پلی الکترولیت مثبت الشحنه', img: getThemeUrl() + '/images/cationic-flocculant.jpg', link: getHomeUrl() + '/product/chemicals/cationic-flocculant/' },
+            { name: 'پتانسیم امیل اگزانتات (PAX)', desc: 'منعقد کننده آب', img: getThemeUrl() + '/images/pax.jpg', link: getHomeUrl() + '/product/chemicals/pax/' },
+            { name: 'متیل ایزوبوتیل کربونیل (MIBC)', desc: 'کف کننده فرآیند فلوتاسیون', img: getThemeUrl() + '/images/mibc.jpg', link: getHomeUrl() + '/product/chemicals/mibc/' },
+            { name: 'تیتانیوم دی اکسید', desc: 'رنگدانه سفید صنعتی', img: getThemeUrl() + '/images/titanium-dioxide.jpg', link: getHomeUrl() + '/product/chemicals/titanium-dioxide/' },
+            { name: 'رنگ ساختمانی', desc: 'رنگ های ساختمانی با کیفیت', img: getThemeUrl() + '/images/building-paint.jpg', link: getHomeUrl() + '/product/chemicals/building-paint/' },
+            { name: 'رنگ صنعتی', desc: 'رنگ های مقاوم صنعتی', img: getThemeUrl() + '/images/industrial-paint.jpg', link: getHomeUrl() + '/product/chemicals/industrial-paint/' },
+            { name: 'دایلوئنت', desc: 'حلال های صنعتی', img: getThemeUrl() + '/images/diluent.jpg', link: getHomeUrl() + '/product/chemicals/diluent/' }
+        ]
+    };
     
     const tabButtons = document.querySelectorAll('.tab-button');
     const productsContainer = document.getElementById('products-container');
     
     if (!productsContainer) return;
+
+    function showProducts(category) {
+        const categoryProducts = products[category];
+        if (!categoryProducts) return;
+        
+        // Add fade out effect
+        productsContainer.classList.add('fade-out');
+        
+        setTimeout(() => {
+            productsContainer.innerHTML = '';
+            
+            categoryProducts.forEach((product, index) => {
+                const productCard = document.createElement('div');
+                productCard.className = 'product-card';
+                productCard.style.animationDelay = `${index * 0.1}s`;
+                
+                productCard.innerHTML = `
+                    <div class="product-image" style="background-image: url('${product.img}')"></div>
+                    <div class="product-info">
+                        <div class="product-title">${product.name}</div>
+                        <div class="product-description">${product.desc}</div>
+                        <a href="${product.link}" class="product-btn">مشاهده جزئیات</a>
+                    </div>
+                `;
+                
+                productsContainer.appendChild(productCard);
+            });
+            
+            // Remove fade out and add fade in
+            productsContainer.classList.remove('fade-out');
+            productsContainer.classList.add('fade-in');
+            
+            setTimeout(() => {
+                productsContainer.classList.remove('fade-in');
+            }, 300);
+        }, 150);
+    }
     
-    function showProducts(category) {\n        const categoryProducts = products[category];\n        if (!categoryProducts) return;\n        \n        // Add fade out effect\n        productsContainer.classList.add('fade-out');\n        \n        setTimeout(() => {\n            productsContainer.innerHTML = '';\n            \n            categoryProducts.forEach((product, index) => {\n                const productCard = document.createElement('div');\n                productCard.className = 'product-card';\n                productCard.style.animationDelay = `${index * 0.1}s`;\n                \n                productCard.innerHTML = `\n                    <div class=\"product-image\" style=\"background-image: url('${product.img}')\"></div>\n                    <div class=\"product-info\">\n                        <div class=\"product-title\">${product.name}</div>\n                        <div class=\"product-description\">${product.desc}</div>\n                        <a href=\"${product.link}\" class=\"product-btn\">مشاهده جزئیات</a>\n                    </div>\n                `;\n                \n                productsContainer.appendChild(productCard);\n            });\n            \n            // Remove fade out and add fade in\n            productsContainer.classList.remove('fade-out');\n            productsContainer.classList.add('fade-in');\n            \n            setTimeout(() => {\n                productsContainer.classList.remove('fade-in');\n            }, 300);\n        }, 150);\n    }\n    \n    // Tab button functionality\n    tabButtons.forEach(button => {\n        button.addEventListener('click', () => {\n            tabButtons.forEach(btn => btn.classList.remove('active'));\n            button.classList.add('active');\n            showProducts(button.dataset.category);\n        });\n    });\n    \n    // Show initial products\n    showProducts('mechanical');\n}\n\n// Enhanced Scroll Animations\nfunction initializeScrollAnimations() {\n    const observerOptions = {\n        threshold: 0.1,\n        rootMargin: '0px 0px -50px 0px'\n    };\n    \n    const observer = new IntersectionObserver((entries) => {\n        entries.forEach(entry => {\n            if (entry.isIntersecting) {\n                entry.target.classList.add('visible');\n                \n                // Trigger counter animation if element has counter\n                if (entry.target.querySelector('.counter')) {\n                    animateCounters(entry.target);\n                }\n            }\n        });\n    }, observerOptions);\n    \n    // Observe all fade-in elements\n    document.querySelectorAll('.fade-in').forEach(el => {\n        observer.observe(el);\n    });\n    \n    // Stagger animations for grid items\n    document.querySelectorAll('.services-grid .service-card, .products-grid .product-card').forEach((card, index) => {\n        card.style.animationDelay = `${index * 0.1}s`;\n    });\n}\n\n// Modern Smooth Scrolling with easing\nfunction initializeSmoothScrolling() {\n    document.querySelectorAll('a[href^=\"#\"]').forEach(anchor => {\n        anchor.addEventListener('click', function (e) {\n            e.preventDefault();\n            const target = document.querySelector(this.getAttribute('href'));\n            \n            if (target) {\n                const headerHeight = document.querySelector('.glass-header').offsetHeight;\n                const targetPosition = target.offsetTop - headerHeight - 20;\n                \n                window.scrollTo({\n                    top: targetPosition,\n                    behavior: 'smooth'\n                });\n                \n                // Add highlighting effect\n                target.style.boxShadow = '0 0 20px rgba(99, 102, 241, 0.3)';\n                setTimeout(() => {\n                    target.style.boxShadow = '';\n                }, 2000);\n            }\n        });\n    });\n}\n\n// Dynamic Header with scroll effects\nfunction initializeHeader() {\n    const header = document.querySelector('.glass-header');\n    if (!header) return;\n    \n    let lastScrollY = window.scrollY;\n    let ticking = false;\n    \n    function updateHeader() {\n        const scrollY = window.scrollY;\n        \n        if (scrollY > 100) {\n            header.classList.add('scrolled');\n        } else {\n            header.classList.remove('scrolled');\n        }\n        \n        // Hide/show header based on scroll direction\n        if (scrollY > lastScrollY && scrollY > 500) {\n            header.style.transform = 'translateY(-100%)';\n        } else {\n            header.style.transform = 'translateY(0)';\n        }\n        \n        lastScrollY = scrollY;\n        ticking = false;\n    }\n    \n    function requestTick() {\n        if (!ticking) {\n            requestAnimationFrame(updateHeader);\n            ticking = true;\n        }\n    }\n    \n    window.addEventListener('scroll', requestTick);\n}\n\n// Particle Background Effect\nfunction initializeParticles() {\n    const hero = document.querySelector('.hero-slider');\n    if (!hero) return;\n    \n    const canvas = document.createElement('canvas');\n    canvas.className = 'particle-canvas';\n    hero.appendChild(canvas);\n    \n    const ctx = canvas.getContext('2d');\n    \n    function resizeCanvas() {\n        canvas.width = hero.offsetWidth;\n        canvas.height = hero.offsetHeight;\n    }\n    \n    resizeCanvas();\n    window.addEventListener('resize', resizeCanvas);\n    \n    const particles = [];\n    const particleCount = 50;\n    \n    class Particle {\n        constructor() {\n            this.x = Math.random() * canvas.width;\n            this.y = Math.random() * canvas.height;\n            this.vx = (Math.random() - 0.5) * 0.5;\n            this.vy = (Math.random() - 0.5) * 0.5;\n            this.size = Math.random() * 2 + 1;\n            this.opacity = Math.random() * 0.5 + 0.2;\n        }\n        \n        update() {\n            this.x += this.vx;\n            this.y += this.vy;\n            \n            if (this.x < 0 || this.x > canvas.width) this.vx *= -1;\n            if (this.y < 0 || this.y > canvas.height) this.vy *= -1;\n        }\n        \n        draw() {\n            ctx.beginPath();\n            ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);\n            ctx.fillStyle = `rgba(99, 102, 241, ${this.opacity})`;\n            ctx.fill();\n        }\n    }\n    \n    // Create particles\n    for (let i = 0; i < particleCount; i++) {\n        particles.push(new Particle());\n    }\n    \n    function animate() {\n        ctx.clearRect(0, 0, canvas.width, canvas.height);\n        \n        particles.forEach(particle => {\n            particle.update();\n            particle.draw();\n        });\n        \n        // Draw connections between nearby particles\n        for (let i = 0; i < particles.length; i++) {\n            for (let j = i + 1; j < particles.length; j++) {\n                const dx = particles[i].x - particles[j].x;\n                const dy = particles[i].y - particles[j].y;\n                const distance = Math.sqrt(dx * dx + dy * dy);\n                \n                if (distance < 100) {\n                    ctx.beginPath();\n                    ctx.moveTo(particles[i].x, particles[i].y);\n                    ctx.lineTo(particles[j].x, particles[j].y);\n                    ctx.strokeStyle = `rgba(139, 92, 246, ${0.2 - distance / 500})`;\n                    ctx.lineWidth = 1;\n                    ctx.stroke();\n                }\n            }\n        }\n        \n        requestAnimationFrame(animate);\n    }\n    \n    animate();\n}\n\n// Animated Counter\nfunction initializeCounters() {\n    window.animateCounters = function(container) {\n        const counters = container.querySelectorAll('.counter');\n        \n        counters.forEach(counter => {\n            const target = parseInt(counter.getAttribute('data-target'));\n            const duration = 2000; // 2 seconds\n            const increment = target / (duration / 16); // 60fps\n            let current = 0;\n            \n            const updateCounter = () => {\n                current += increment;\n                if (current < target) {\n                    counter.textContent = Math.floor(current);\n                    requestAnimationFrame(updateCounter);\n                } else {\n                    counter.textContent = target;\n                }\n            };\n            \n            updateCounter();\n        });\n    };\n}\n\n// Enhanced Contact Form\nfunction initializeContactForm() {\n    const form = document.getElementById('contactForm');\n    if (!form) return;\n    \n    // Add loading state to form\n    form.addEventListener('submit', function(e) {\n        const submitBtn = form.querySelector('button[type=\"submit\"]');\n        const originalText = submitBtn.textContent;\n        \n        submitBtn.textContent = 'در حال ارسال...';\n        submitBtn.disabled = true;\n        \n        // Reset after 3 seconds if no response\n        setTimeout(() => {\n            submitBtn.textContent = originalText;\n            submitBtn.disabled = false;\n        }, 3000);\n    });\n    \n    // Add real-time validation\n    const inputs = form.querySelectorAll('input, textarea');\n    inputs.forEach(input => {\n        input.addEventListener('blur', validateInput);\n        input.addEventListener('input', clearError);\n    });\n    \n    function validateInput(e) {\n        const input = e.target;\n        const value = input.value.trim();\n        \n        // Remove existing error state\n        input.classList.remove('error');\n        \n        // Validate based on input type\n        if (input.hasAttribute('required') && !value) {\n            showInputError(input, 'این فیلد الزامی است');\n        } else if (input.type === 'email' && value && !isValidEmail(value)) {\n            showInputError(input, 'فرمت ایمیل صحیح نیست');\n        }\n    }\n    \n    function clearError(e) {\n        e.target.classList.remove('error');\n    }\n    \n    function showInputError(input, message) {\n        input.classList.add('error');\n        showNotification(message, 'error');\n    }\n    \n    function isValidEmail(email) {\n        return /^[^\\s@]+@[^\\s@]+\\.[^\\s@]+$/.test(email);\n    }\n}\n\n// Notification System\nfunction showNotification(message, type = 'success') {\n    const notification = document.createElement('div');\n    notification.className = `notification ${type}`;\n    \n    notification.innerHTML = `\n        <div class=\"notification-content\">\n            <span class=\"notification-message\">${message}</span>\n            <button class=\"notification-close\">&times;</button>\n        </div>\n    `;\n    \n    document.body.appendChild(notification);\n    \n    // Show notification\n    setTimeout(() => notification.classList.add('show'), 100);\n    \n    // Auto hide after 5 seconds\n    const autoHide = setTimeout(() => hideNotification(notification), 5000);\n    \n    // Close button functionality\n    notification.querySelector('.notification-close').addEventListener('click', () => {\n        clearTimeout(autoHide);\n        hideNotification(notification);\n    });\n    \n    function hideNotification(notif) {\n        notif.classList.remove('show');\n        setTimeout(() => notif.remove(), 300);\n    }\n}\n\n// Utility functions\nfunction getThemeUrl() {\n    // This would be replaced with actual theme URL in WordPress\n    return window.themeUrl || '';\n}\n\nfunction getHomeUrl() {\n    // This would be replaced with actual home URL in WordPress\n    return window.homeUrl || '';\n}\n\n// Export for WordPress integration\nif (typeof window !== 'undefined') {\n    window.AronTaraTheme = {\n        initializeSlider,\n        initializeProducts,\n        showNotification\n    };\n}
+    // Tab button functionality
+    tabButtons.forEach(button => {
+        button.addEventListener('click', () => {
+            tabButtons.forEach(btn => btn.classList.remove('active'));
+            button.classList.add('active');
+            showProducts(button.dataset.category);
+        });
+    });
+    
+    // Show initial products
+    showProducts('mechanical');
+}
+
+// Enhanced Scroll Animations
+function initializeScrollAnimations() {
+    const observerOptions = {
+        threshold: 0.1,
+        rootMargin: '0px 0px -50px 0px'
+    };
+    
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('visible');
+                
+                // Trigger counter animation if element has counter
+                if (entry.target.querySelector('.counter')) {
+                    animateCounters(entry.target);
+                }
+            }
+        });
+    }, observerOptions);
+    
+    // Observe all fade-in elements
+    document.querySelectorAll('.fade-in').forEach(el => {
+        observer.observe(el);
+    });
+    
+    // Stagger animations for grid items
+    document.querySelectorAll('.services-grid .service-card, .products-grid .product-card').forEach((card, index) => {
+        card.style.animationDelay = `${index * 0.1}s`;
+    });
+}
+
+// Modern Smooth Scrolling with easing
+function initializeSmoothScrolling() {
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+            e.preventDefault();
+            const target = document.querySelector(this.getAttribute('href'));
+            
+            if (target) {
+                const headerHeight = document.querySelector('.glass-header').offsetHeight;
+                const targetPosition = target.offsetTop - headerHeight - 20;
+                
+                window.scrollTo({
+                    top: targetPosition,
+                    behavior: 'smooth'
+                });
+                
+                // Add highlighting effect
+                target.style.boxShadow = '0 0 20px rgba(99, 102, 241, 0.3)';
+                setTimeout(() => {
+                    target.style.boxShadow = '';
+                }, 2000);
+            }
+        });
+    });
+}
+
+// Dynamic Header with scroll effects
+function initializeHeader() {
+    const header = document.querySelector('.glass-header');
+    if (!header) return;
+    
+    let lastScrollY = window.scrollY;
+    let ticking = false;
+    
+    function updateHeader() {
+        const scrollY = window.scrollY;
+        
+        if (scrollY > 100) {
+            header.classList.add('scrolled');
+        } else {
+            header.classList.remove('scrolled');
+        }
+        
+        // Hide/show header based on scroll direction
+        if (scrollY > lastScrollY && scrollY > 500) {
+            header.style.transform = 'translateY(-100%)';
+        } else {
+            header.style.transform = 'translateY(0)';
+        }
+        
+        lastScrollY = scrollY;
+        ticking = false;
+    }
+    
+    function requestTick() {
+        if (!ticking) {
+            requestAnimationFrame(updateHeader);
+            ticking = true;
+        }
+    }
+    
+    window.addEventListener('scroll', requestTick);
+}
+
+// Particle Background Effect
+function initializeParticles() {
+    const hero = document.querySelector('.hero-slider');
+    if (!hero) return;
+    
+    const canvas = document.createElement('canvas');
+    canvas.className = 'particle-canvas';
+    hero.appendChild(canvas);
+    
+    const ctx = canvas.getContext('2d');
+    
+    function resizeCanvas() {
+        canvas.width = hero.offsetWidth;
+        canvas.height = hero.offsetHeight;
+    }
+    
+    resizeCanvas();
+    window.addEventListener('resize', resizeCanvas);
+    
+    const particles = [];
+    const particleCount = 50;
+    
+    class Particle {
+        constructor() {
+            this.x = Math.random() * canvas.width;
+            this.y = Math.random() * canvas.height;
+            this.vx = (Math.random() - 0.5) * 0.5;
+            this.vy = (Math.random() - 0.5) * 0.5;
+            this.size = Math.random() * 2 + 1;
+            this.opacity = Math.random() * 0.5 + 0.2;
+        }
+        
+        update() {
+            this.x += this.vx;
+            this.y += this.vy;
+            
+            if (this.x < 0 || this.x > canvas.width) this.vx *= -1;
+            if (this.y < 0 || this.y > canvas.height) this.vy *= -1;
+        }
+        
+        draw() {
+            ctx.beginPath();
+            ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
+            ctx.fillStyle = `rgba(99, 102, 241, ${this.opacity})`;
+            ctx.fill();
+        }
+    }
+    
+    // Create particles
+    for (let i = 0; i < particleCount; i++) {
+        particles.push(new Particle());
+    }
+    
+    function animate() {
+        ctx.clearRect(0, 0, canvas.width, canvas.height);
+        
+        particles.forEach(particle => {
+            particle.update();
+            particle.draw();
+        });
+        
+        // Draw connections between nearby particles
+        for (let i = 0; i < particles.length; i++) {
+            for (let j = i + 1; j < particles.length; j++) {
+                const dx = particles[i].x - particles[j].x;
+                const dy = particles[i].y - particles[j].y;
+                const distance = Math.sqrt(dx * dx + dy * dy);
+                
+                if (distance < 100) {
+                    ctx.beginPath();
+                    ctx.moveTo(particles[i].x, particles[i].y);
+                    ctx.lineTo(particles[j].x, particles[j].y);
+                    ctx.strokeStyle = `rgba(139, 92, 246, ${0.2 - distance / 500})`;
+                    ctx.lineWidth = 1;
+                    ctx.stroke();
+                }
+            }
+        }
+        
+        requestAnimationFrame(animate);
+    }
+    
+    animate();
+}
+
+// Animated Counter
+function initializeCounters() {
+    window.animateCounters = function(container) {
+        const counters = container.querySelectorAll('.counter');
+        
+        counters.forEach(counter => {
+            const target = parseInt(counter.getAttribute('data-target'));
+            const duration = 2000; // 2 seconds
+            const increment = target / (duration / 16); // 60fps
+            let current = 0;
+            
+            const updateCounter = () => {
+                current += increment;
+                if (current < target) {
+                    counter.textContent = Math.floor(current);
+                    requestAnimationFrame(updateCounter);
+                } else {
+                    counter.textContent = target;
+                }
+            };
+            
+            updateCounter();
+        });
+    };
+}
+
+// Enhanced Contact Form
+function initializeContactForm() {
+    const form = document.getElementById('contactForm');
+    if (!form) return;
+    
+    // Add loading state to form
+    form.addEventListener('submit', function(e) {
+        const submitBtn = form.querySelector('button[type="submit"]');
+        const originalText = submitBtn.textContent;
+        
+        submitBtn.textContent = 'در حال ارسال...';
+        submitBtn.disabled = true;
+        
+        // Reset after 3 seconds if no response
+        setTimeout(() => {
+            submitBtn.textContent = originalText;
+            submitBtn.disabled = false;
+        }, 3000);
+    });
+    
+    // Add real-time validation
+    const inputs = form.querySelectorAll('input, textarea');
+    inputs.forEach(input => {
+        input.addEventListener('blur', validateInput);
+        input.addEventListener('input', clearError);
+    });
+    
+    function validateInput(e) {
+        const input = e.target;
+        const value = input.value.trim();
+        
+        // Remove existing error state
+        input.classList.remove('error');
+        
+        // Validate based on input type
+        if (input.hasAttribute('required') && !value) {
+            showInputError(input, 'این فیلد الزامی است');
+        } else if (input.type === 'email' && value && !isValidEmail(value)) {
+            showInputError(input, 'فرمت ایمیل صحیح نیست');
+        }
+    }
+    
+    function clearError(e) {
+        e.target.classList.remove('error');
+    }
+    
+    function showInputError(input, message) {
+        input.classList.add('error');
+        showNotification(message, 'error');
+    }
+    
+    function isValidEmail(email) {
+        return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
+    }
+}
+
+// Notification System
+function showNotification(message, type = 'success') {
+    const notification = document.createElement('div');
+    notification.className = `notification ${type}`;
+    
+    notification.innerHTML = `
+        <div class="notification-content">
+            <span class="notification-message">${message}</span>
+            <button class="notification-close">&times;</button>
+        </div>
+    `;
+    
+    document.body.appendChild(notification);
+    
+    // Show notification
+    setTimeout(() => notification.classList.add('show'), 100);
+    
+    // Auto hide after 5 seconds
+    const autoHide = setTimeout(() => hideNotification(notification), 5000);
+    
+    // Close button functionality
+    notification.querySelector('.notification-close').addEventListener('click', () => {
+        clearTimeout(autoHide);
+        hideNotification(notification);
+    });
+    
+    function hideNotification(notif) {
+        notif.classList.remove('show');
+        setTimeout(() => notif.remove(), 300);
+    }
+}
+
+// Utility functions
+function getThemeUrl() {
+    // This would be replaced with actual theme URL in WordPress
+    return window.themeUrl || '';
+}
+
+function getHomeUrl() {
+    // This would be replaced with actual home URL in WordPress
+    return window.homeUrl || '';
+}
+
+// Export for WordPress integration
+if (typeof window !== 'undefined') {
+    window.AronTaraTheme = {
+        initializeSlider,
+        initializeProducts,
+        showNotification
+    };
+}
