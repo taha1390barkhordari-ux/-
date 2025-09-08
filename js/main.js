@@ -54,8 +54,8 @@ function initializeSlider() {
         showSlide(currentSlide);
     }
     
-    // Auto advance slides
-    let slideInterval = setInterval(nextSlide, 6000);
+    // Auto advance slides - much faster now
+    let slideInterval = setInterval(nextSlide, 2500);
     
     // Dot navigation
     dots.forEach((dot, index) => {
