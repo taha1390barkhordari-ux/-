@@ -293,13 +293,13 @@ function initProducts() {
             { name: 'فیلترهای هیدرولیک', desc: 'فیلترهای صنعتی و تعویضی', img: 'https://images.unsplash.com/photo-1519003722824-194d4455a60c?w=400', link: '<?php echo home_url("/product/mechanical/hydraulic-filter/"); ?>' }
         ],
         electrical: [
-            { name: 'الکترو موتورها', desc: 'موتورهای الکتریکی سه فاز', img: '<?php echo get_template_directory_uri(); ?>/images/electric-motor.jpg' },
-            { name: 'کنتاکتورها', desc: 'کنتاکتورهای برقی صنعتی', img: '<?php echo get_template_directory_uri(); ?>/images/contactor.jpg' },
-            { name: 'کارت های الکترونیکی', desc: 'بردهای الکترونیکی صنعتی', img: '<?php echo get_template_directory_uri(); ?>/images/electronic-board.jpg' },
-            { name: 'ویبرومتر', desc: 'دستگاه های اندازه گیری ارتعاش', img: '<?php echo get_template_directory_uri(); ?>/images/vibrometer.jpg' },
-            { name: 'سنسورهای صنعتی', desc: 'انواع سنسورهای اتوماسیون', img: '<?php echo get_template_directory_uri(); ?>/images/sensor.jpg' },
-            { name: 'ترانسفورماتور', desc: 'ترانسفورماتورهای قدرت', img: '<?php echo get_template_directory_uri(); ?>/images/transformer.jpg' },
-            { name: 'گیربکس الکتریکی', desc: 'گیربکس های کاهنده دور', img: '<?php echo get_template_directory_uri(); ?>/images/gearbox.jpg' }
+            { name: 'الکترو موتورها', desc: 'موتورهای الکتریکی سه فاز', img: 'https://images.unsplash.com/photo-1621905252507-b35492cc74b4?w=400', link: '<?php echo home_url("/product/electrical/electric-motor/"); ?>' },
+            { name: 'کنتاکتورها', desc: 'کنتاکتورهای برقی صنعتی', img: 'https://images.unsplash.com/photo-1556075798-4825dfaaf498?w=400', link: '<?php echo home_url("/product/electrical/contactor/"); ?>' },
+            { name: 'کارت های الکترونیکی', desc: 'بردهای الکترونیکی صنعتی', img: 'https://images.unsplash.com/photo-1518709268805-4e9042af2176?w=400', link: '<?php echo home_url("/product/electrical/electronic-board/"); ?>' },
+            { name: 'ویبرومتر', desc: 'دستگاه های اندازه گیری ارتعاش', img: 'https://images.unsplash.com/photo-1576091160399-112ba8d25d1f?w=400', link: '<?php echo home_url("/product/electrical/vibrometer/"); ?>' },
+            { name: 'سنسورهای صنعتی', desc: 'انواع سنسورهای اتوماسیون', img: 'https://images.unsplash.com/photo-1559757148-5c350d0d3c56?w=400', link: '<?php echo home_url("/product/electrical/sensor/"); ?>' },
+            { name: 'ترانسفورماتور', desc: 'ترانسفورماتورهای قدرت', img: 'https://images.unsplash.com/photo-1565106430482-8f6e74349ca1?w=400', link: '<?php echo home_url("/product/electrical/transformer/"); ?>' },
+            { name: 'گیربکس الکتریکی', desc: 'گیربکس های کاهنده دور', img: 'https://images.unsplash.com/photo-1504328345606-18bbc8c9d7d1?w=400', link: '<?php echo home_url("/product/electrical/gearbox/"); ?>' }
         ],
         instruments: [
             { name: 'حرارت سنج ها', desc: 'ترمومترهای صنعتی دیجیتال', img: '<?php echo get_template_directory_uri(); ?>/images/thermometer.jpg', link: '<?php echo home_url("/product/instruments/thermometer/"); ?>' },
