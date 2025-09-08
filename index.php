@@ -343,7 +343,9 @@ function initProducts() {
             const productCard = document.createElement('div');
             productCard.className = 'product-card';
             productCard.innerHTML = `
-                <div class="product-image" style="background-image: url('${product.img}')"></div>
+                <div class="product-image">
+                    <i class="fas fa-${getProductIcon(product.name)}" style="font-size: 4rem; color: white; text-shadow: 0 2px 10px rgba(0,0,0,0.3);"></i>
+                </div>
                 <div class="product-info">
                     <div class="product-title">${product.name}</div>
                     <div class="product-description">${product.desc}</div>
