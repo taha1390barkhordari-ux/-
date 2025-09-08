@@ -535,22 +535,25 @@ section {
 }
 
 .product-btn {
-    background: var(--gradient-secondary);
+    display: inline-block;
+    background: var(--gradient-accent);
     color: white;
-    border: none;
+    text-decoration: none;
     padding: 0.8rem 1.5rem;
     border-radius: var(--radius-md);
-    cursor: pointer;
-    font-weight: 500;
+    font-weight: 600;
     transition: all 0.3s ease;
     font-family: inherit;
     margin-top: 1rem;
     width: 100%;
+    text-align: center;
+    border: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 .product-btn:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 8px 25px rgba(139, 92, 246, 0.4);
+    transform: translateY(-3px);
+    box-shadow: var(--shadow-glow-pink);
+    background: var(--gradient-sunset);
 }
 
 /* Contact Section */
