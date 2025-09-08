@@ -155,7 +155,7 @@
 
 .back-to-top:hover {
     transform: translateY(-3px);
-    box-shadow: 0 8px 25px rgba(76, 175, 80, 0.4);
+    box-shadow: var(--shadow-glow-pink);
 }
 
 /* Floating Contact Buttons */
