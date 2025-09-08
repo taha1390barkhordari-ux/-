@@ -78,7 +78,7 @@ function initializeSlider() {
     if (sliderContainer) {
         sliderContainer.addEventListener('mouseenter', () => clearInterval(slideInterval));
         sliderContainer.addEventListener('mouseleave', () => {
-            slideInterval = setInterval(nextSlide, 6000);
+            slideInterval = setInterval(nextSlide, 2500);
         });
     }
 }
