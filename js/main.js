@@ -87,14 +87,14 @@ function initializeSlider() {
 function initializeProducts() {
     const products = {
         mechanical: [
-            { name: 'بیرینگ های غلتکی', desc: 'تامین و تعمیر انواع بیرینگ های صنعتی', img: getThemeUrl() + '/images/bearing.jpg', link: getHomeUrl() + '/product/mechanical/bearing/' },
-            { name: 'پمپ های هیدرولیک', desc: 'پمپ های هیدرولیک و لوازم یدکی', img: getThemeUrl() + '/images/hydraulic-pump.jpg', link: getHomeUrl() + '/product/mechanical/hydraulic-pump/' },
-            { name: 'موتورهای هیدرولیک', desc: 'موتورهای هیدرولیک و قطعات جانبی', img: getThemeUrl() + '/images/hydraulic-motor.jpg', link: getHomeUrl() + '/product/mechanical/hydraulic-motor/' },
-            { name: 'فن های صنعتی', desc: 'انواع فن های صنعتی و تهویه', img: getThemeUrl() + '/images/industrial-fan.jpg', link: getHomeUrl() + '/product/mechanical/industrial-fan/' },
-            { name: 'جک های هیدرولیک', desc: 'جک های هیدرولیک و لوازم یدکی', img: getThemeUrl() + '/images/hydraulic-jack.jpg', link: getHomeUrl() + '/product/mechanical/hydraulic-jack/' },
-            { name: 'کوپلینگ های هیدرولیک', desc: 'کوپلینگ ها و اتصالات هیدرولیک', img: getThemeUrl() + '/images/coupling.jpg', link: getHomeUrl() + '/product/mechanical/coupling/' },
-            { name: 'مبدل های حرارتی', desc: 'مبدل های حرارتی تیوب و پلیت', img: getThemeUrl() + '/images/heat-exchanger.jpg', link: getHomeUrl() + '/product/mechanical/heat-exchanger/' },
-            { name: 'فیلترهای هیدرولیک', desc: 'فیلترهای صنعتی و تعویضی', img: getThemeUrl() + '/images/hydraulic-filter.jpg', link: getHomeUrl() + '/product/mechanical/hydraulic-filter/' }
+            { name: 'بیرینگ های غلتکی', desc: 'تامین و تعمیر انواع بیرینگ های صنعتی', link: 'single-product.php?category=mechanical&product=bearing' },
+            { name: 'پمپ های هیدرولیک', desc: 'پمپ های هیدرولیک و لوازم یدکی', link: 'single-product.php?category=mechanical&product=hydraulic-pump' },
+            { name: 'موتورهای هیدرولیک', desc: 'موتورهای هیدرولیک و قطعات جانبی', link: 'single-product.php?category=mechanical&product=hydraulic-motor' },
+            { name: 'فن های صنعتی', desc: 'انواع فن های صنعتی و تهویه', link: 'single-product.php?category=mechanical&product=industrial-fan' },
+            { name: 'جک های هیدرولیک', desc: 'جک های هیدرولیک و لوازم یدکی', link: 'single-product.php?category=mechanical&product=hydraulic-jack' },
+            { name: 'کوپلینگ های هیدرولیک', desc: 'کوپلینگ ها و اتصالات هیدرولیک', link: 'single-product.php?category=mechanical&product=coupling' },
+            { name: 'مبدل های حرارتی', desc: 'مبدل های حرارتی تیوب و پلیت', link: 'single-product.php?category=mechanical&product=heat-exchanger' },
+            { name: 'فیلترهای هیدرولیک', desc: 'فیلترهای صنعتی و تعویضی', link: 'single-product.php?category=mechanical&product=hydraulic-filter' }
         ],
         electrical: [
             { name: 'الکترو موتورها', desc: 'موتورهای الکتریکی سه فاز', img: getThemeUrl() + '/images/electric-motor.jpg', link: getHomeUrl() + '/product/electrical/electric-motor/' },
