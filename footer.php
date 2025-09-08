@@ -34,7 +34,7 @@
                 <p><strong>تلفن:</strong> <a href="tel:034-32476351">034-32476351-2</a></p>
                 <p><strong>فکس:</strong> 034-32473605</p>
                 <p><strong>موبایل مدیرعامل:</strong><br>
-                <a href="tel:09106168590">09106168590</a></p>
+                <a href="tel:091061268590">091061268590</a></p>
             </div>
             
             <div class="footer-section">
@@ -117,10 +117,10 @@
 
 <!-- Contact Float Button -->
 <div class="floating-contact">
-    <a href="tel:091061268590" class="float-button phone" aria-label="تماس تلفنی">
+    <a href="tel:09106168590" class="float-button phone" aria-label="تماس تلفنی">
         📞
     </a>
-    <a href="https://wa.me/+989106126859" class="float-button whatsapp" aria-label="واتساپ">
+    <a href="https://wa.me/989106168590" class="float-button whatsapp" aria-label="واتساپ">
         📱
     </a>
 </div>
