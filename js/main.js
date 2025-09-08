@@ -97,22 +97,22 @@ function initializeProducts() {
             { name: 'فیلترهای هیدرولیک', desc: 'فیلترهای صنعتی و تعویضی', link: 'single-product.php?category=mechanical&product=hydraulic-filter' }
         ],
         electrical: [
-            { name: 'الکترو موتورها', desc: 'موتورهای الکتریکی سه فاز', link: 'single-product.php?category=electrical&product=electric-motor' },
-            { name: 'کنتاکتورها', desc: 'کنتاکتورهای برقی صنعتی', link: 'single-product.php?category=electrical&product=contactor' },
-            { name: 'کارت های الکترونیکی', desc: 'بردهای الکترونیکی صنعتی', link: 'single-product.php?category=electrical&product=electronic-board' },
-            { name: 'ویبرومتر', desc: 'دستگاه های اندازه گیری ارتعاش', link: 'single-product.php?category=electrical&product=vibrometer' },
-            { name: 'سنسورهای صنعتی', desc: 'انواع سنسورهای اتوماسیون', link: 'single-product.php?category=electrical&product=sensor' },
-            { name: 'ترانسفورماتور', desc: 'ترانسفورماتورهای قدرت', link: 'single-product.php?category=electrical&product=transformer' },
-            { name: 'گیربکس الکتریکی', desc: 'گیربکس های کاهنده دور', link: 'single-product.php?category=electrical&product=gearbox' }
+            { name: 'الکترو موتورها', desc: 'موتورهای الکتریکی سه فاز', img: getThemeUrl() + '/images/electric-motor.jpg', link: getHomeUrl() + '/product/electrical/electric-motor/' },
+            { name: 'کنتاکتورها', desc: 'کنتاکتورهای برقی صنعتی', img: getThemeUrl() + '/images/contactor.jpg', link: getHomeUrl() + '/product/electrical/contactor/' },
+            { name: 'کارت های الکترونیکی', desc: 'بردهای الکترونیکی صنعتی', img: getThemeUrl() + '/images/electronic-board.jpg', link: getHomeUrl() + '/product/electrical/electronic-board/' },
+            { name: 'ویبرومتر', desc: 'دستگاه های اندازه گیری ارتعاش', img: getThemeUrl() + '/images/vibrometer.jpg', link: getHomeUrl() + '/product/electrical/vibrometer/' },
+            { name: 'سنسورهای صنعتی', desc: 'انواع سنسورهای اتوماسیون', img: getThemeUrl() + '/images/sensor.jpg', link: getHomeUrl() + '/product/electrical/sensor/' },
+            { name: 'ترانسفورماتور', desc: 'ترانسفورماتورهای قدرت', img: getThemeUrl() + '/images/transformer.jpg', link: getHomeUrl() + '/product/electrical/transformer/' },
+            { name: 'گیربکس الکتریکی', desc: 'گیربکس های کاهنده دور', img: getThemeUrl() + '/images/gearbox.jpg', link: getHomeUrl() + '/product/electrical/gearbox/' }
         ],
         instruments: [
-            { name: 'حرارت سنج ها', desc: 'ترمومترهای صنعتی دیجیتال', img: getThemeUrl() + '/images/thermometer.jpg', link: getHomeUrl() + '/product/instruments/thermometer/' },
-            { name: 'فشارسنج ها', desc: 'مانومترهای دقیق صنعتی', img: getThemeUrl() + '/images/pressure-gauge.jpg', link: getHomeUrl() + '/product/instruments/pressure-gauge/' },
-            { name: 'سطح سنج ها', desc: 'ترانسمیترهای سطح مایعات', img: getThemeUrl() + '/images/level-meter.jpg', link: getHomeUrl() + '/product/instruments/level-meter/' },
-            { name: 'شیرهای کنترلی', desc: 'شیرهای اتوماتیک کنترل فرآیند', img: getThemeUrl() + '/images/control-valve.jpg', link: getHomeUrl() + '/product/instruments/control-valve/' },
-            { name: 'پرشر سوئیچ', desc: 'سوئیچ های فشار صنعتی', img: getThemeUrl() + '/images/pressure-switch.jpg', link: getHomeUrl() + '/product/instruments/pressure-switch/' },
-            { name: 'لول ترانسمیتر', desc: 'فرستنده های سطح مایع', img: getThemeUrl() + '/images/level-transmitter.jpg', link: getHomeUrl() + '/product/instruments/level-transmitter/' },
-            { name: 'رله های حفاظتی', desc: 'رله های کنترل و حفاظت', img: getThemeUrl() + '/images/relay.jpg', link: getHomeUrl() + '/product/instruments/relay/' }
+            { name: 'حرارت سنج ها', desc: 'ترمومترهای صنعتی دیجیتال', link: 'single-product.php?category=instruments&product=thermometer' },
+            { name: 'فشارسنج ها', desc: 'مانومترهای دقیق صنعتی', link: 'single-product.php?category=instruments&product=pressure-gauge' },
+            { name: 'سطح سنج ها', desc: 'ترانسمیترهای سطح مایعات', link: 'single-product.php?category=instruments&product=level-meter' },
+            { name: 'شیرهای کنترلی', desc: 'شیرهای اتوماتیک کنترل فرآیند', link: 'single-product.php?category=instruments&product=control-valve' },
+            { name: 'پرشر سوئیچ', desc: 'سوئیچ های فشار صنعتی', link: 'single-product.php?category=instruments&product=pressure-switch' },
+            { name: 'لول ترانسمیتر', desc: 'فرستنده های سطح مایع', link: 'single-product.php?category=instruments&product=level-transmitter' },
+            { name: 'رله های حفاظتی', desc: 'رله های کنترل و حفاظت', link: 'single-product.php?category=instruments&product=relay' }
         ],
         laboratory: [
             { name: 'اسپکتروفتومتر', desc: 'دستگاه طیف سنجی UV-Vis', img: getThemeUrl() + '/images/spectrophotometer.jpg', link: getHomeUrl() + '/product/laboratory/spectrophotometer/' },
