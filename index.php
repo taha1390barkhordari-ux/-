@@ -302,13 +302,13 @@ function initProducts() {
             { name: 'گیربکس الکتریکی', desc: 'گیربکس های کاهنده دور', img: 'https://images.unsplash.com/photo-1504328345606-18bbc8c9d7d1?w=400', link: '<?php echo home_url("/product/electrical/gearbox/"); ?>' }
         ],
         instruments: [
-            { name: 'حرارت سنج ها', desc: 'ترمومترهای صنعتی دیجیتال', img: '<?php echo get_template_directory_uri(); ?>/images/thermometer.jpg', link: '<?php echo home_url("/product/instruments/thermometer/"); ?>' },
-            { name: 'فشارسنج ها', desc: 'مانومترهای دقیق صنعتی', img: '<?php echo get_template_directory_uri(); ?>/images/pressure-gauge.jpg', link: '<?php echo home_url("/product/instruments/pressure-gauge/"); ?>' },
-            { name: 'سطح سنج ها', desc: 'ترانسمیترهای سطح مایعات', img: '<?php echo get_template_directory_uri(); ?>/images/level-meter.jpg', link: '<?php echo home_url("/product/instruments/level-meter/"); ?>' },
-            { name: 'شیرهای کنترلی', desc: 'شیرهای اتوماتیک کنترل فرآیند', img: '<?php echo get_template_directory_uri(); ?>/images/control-valve.jpg', link: '<?php echo home_url("/product/instruments/control-valve/"); ?>' },
-            { name: 'پرشر سوئیچ', desc: 'سوئیچ های فشار صنعتی', img: '<?php echo get_template_directory_uri(); ?>/images/pressure-switch.jpg', link: '<?php echo home_url("/product/instruments/pressure-switch/"); ?>' },
-            { name: 'لول ترانسمیتر', desc: 'فرستنده های سطح مایع', img: '<?php echo get_template_directory_uri(); ?>/images/level-transmitter.jpg', link: '<?php echo home_url("/product/instruments/level-transmitter/"); ?>' },
-            { name: 'رله های حفاظتی', desc: 'رله های کنترل و حفاظت', img: '<?php echo get_template_directory_uri(); ?>/images/relay.jpg', link: '<?php echo home_url("/product/instruments/relay/"); ?>' }
+            { name: 'حرارت سنج ها', desc: 'ترمومترهای صنعتی دیجیتال', img: 'https://images.unsplash.com/photo-1584464491033-06628f3a6b7b?w=400', link: '<?php echo home_url("/product/instruments/thermometer/"); ?>' },
+            { name: 'فشارسنج ها', desc: 'مانومترهای دقیق صنعتی', img: 'https://images.unsplash.com/photo-1576091160550-2173dba999ef?w=400', link: '<?php echo home_url("/product/instruments/pressure-gauge/"); ?>' },
+            { name: 'سطح سنج ها', desc: 'ترانسمیترهای سطح مایعات', img: 'https://images.unsplash.com/photo-1559757175-0eb30cd8c063?w=400', link: '<?php echo home_url("/product/instruments/level-meter/"); ?>' },
+            { name: 'شیرهای کنترلی', desc: 'شیرهای اتوماتیک کنترل فرآیند', img: 'https://images.unsplash.com/photo-1581591524425-c7e0978865fc?w=400', link: '<?php echo home_url("/product/instruments/control-valve/"); ?>' },
+            { name: 'پرشر سوئیچ', desc: 'سوئیچ های فشار صنعتی', img: 'https://images.unsplash.com/photo-1559049297-692c2a30fb82?w=400', link: '<?php echo home_url("/product/instruments/pressure-switch/"); ?>' },
+            { name: 'لول ترانسمیتر', desc: 'فرستنده های سطح مایع', img: 'https://images.unsplash.com/photo-1584464491033-06628f3a6b7b?w=400', link: '<?php echo home_url("/product/instruments/level-transmitter/"); ?>' },
+            { name: 'رله های حفاظتی', desc: 'رله های کنترل و حفاظت', img: 'https://images.unsplash.com/photo-1518709268805-4e9042af2176?w=400', link: '<?php echo home_url("/product/instruments/relay/"); ?>' }
         ],
         laboratory: [
             { name: 'اسپکتروفتومتر', desc: 'دستگاه طیف سنجی UV-Vis', img: '<?php echo get_template_directory_uri(); ?>/images/spectrophotometer.jpg', link: '<?php echo home_url("/product/laboratory/spectrophotometer/"); ?>' },
