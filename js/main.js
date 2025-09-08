@@ -78,7 +78,7 @@ function initializeSlider() {
     if (sliderContainer) {
         sliderContainer.addEventListener('mouseenter', () => clearInterval(slideInterval));
         sliderContainer.addEventListener('mouseleave', () => {
-            slideInterval = setInterval(nextSlide, 2500);
+            slideInterval = setInterval(nextSlide, 6000);
         });
     }
 }
@@ -157,7 +157,9 @@ function initializeProducts() {
                 productCard.style.animationDelay = `${index * 0.1}s`;
                 
                 productCard.innerHTML = `
-                    <div class="product-image" style="background-image: url('${product.img}')"></div>
+                    <div class="product-image">
+                        <i class="fas fa-${getProductIcon(product.name)}" style="font-size: 4rem; color: var(--primary-blue); display: flex; align-items: center; justify-content: center; height: 100%;"></i>
+                    </div>
                     <div class="product-info">
                         <div class="product-title">${product.name}</div>
                         <div class="product-description">${product.desc}</div>
