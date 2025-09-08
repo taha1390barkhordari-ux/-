@@ -438,6 +438,81 @@
     font-size: 1.8rem;
 }
 
+.products-slider {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+    padding: 1rem;
+}
+
+.related-product-card {
+    background: white;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    transition: all 0.3s ease;
+    border: 1px solid rgba(74, 144, 226, 0.1);
+}
+
+.related-product-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 20px 40px rgba(74, 144, 226, 0.15);
+}
+
+.related-product-image {
+    height: 200px;
+    overflow: hidden;
+    position: relative;
+}
+
+.related-product-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.related-product-card:hover .related-product-image img {
+    transform: scale(1.05);
+}
+
+.related-product-info {
+    padding: 1.5rem;
+}
+
+.related-product-info h4 {
+    color: var(--deep-navy);
+    margin-bottom: 0.5rem;
+    font-size: 1.1rem;
+    font-weight: 600;
+}
+
+.related-product-info p {
+    color: var(--medium-gray);
+    font-size: 0.9rem;
+    margin-bottom: 1rem;
+    line-height: 1.5;
+}
+
+.related-product-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    background: var(--gradient-1);
+    color: white;
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    text-decoration: none;
+    font-size: 0.9rem;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.related-product-link:hover {
+    transform: translateX(-3px);
+    box-shadow: 0 5px 15px rgba(102, 126, 234, 0.3);
+}
+
 .floating-contact {
     position: fixed;
     bottom: 2rem;
@@ -528,155 +603,17 @@ document.addEventListener('DOMContentLoaded', function() {
     loadRelatedProducts();
 });
 
-// دیتابیس محصولات مشابه main.js
-const productDatabase = {
-    mechanical: [
-        { 
-            name: 'بیرینگ های غلتکی', 
-            desc: 'تامین و تعمیر انواع بیرینگ های صنعتی', 
-            fullDesc: 'بیرینگ‌های غلتکی یکی از مهم‌ترین قطعات مکانیکی در صنایع مختلف هستند. ما انواع بیرینگ‌های ساچمه‌ای، استوانه‌ای، مخروطی و تراست را با برندهای معتبر بین‌المللی ارائه می‌دهیم.',
-            features: ['مقاومت بالا در برابر فشار', 'عمر طولانی', 'کارایی بالا', 'نصب آسان', 'نگهداری کم'],
-            specs: { brand: 'SKF, FAG, NSK', origin: 'آلمان، ژاپن', warranty: '2 سال', status: 'موجود' },
-            applications: ['پمپ‌های صنعتی', 'کمپرسورها', 'فن‌های صنعتی', 'گیربکس‌ها', 'موتورهای الکتریکی']
-        },
-        { 
-            name: 'پمپ های هیدرولیک', 
-            desc: 'پمپ های هیدرولیک و لوازم یدکی', 
-            fullDesc: 'پمپ‌های هیدرولیک با کیفیت بالا برای سیستم‌های هیدرولیک صنعتی. شامل پمپ‌های دندانه‌ای، پیستونی و پره‌ای با فشار کاری تا 350 بار.',
-            features: ['فشار کاری بالا', 'راندمان بالا', 'صدای کم', 'مقاوم در برابر فرسایش', 'طراحی فشرده'],
-            specs: { brand: 'Rexroth, Parker', origin: 'آلمان، آمریکا', warranty: '18 ماه', status: 'موجود' },
-            applications: ['دستگاه‌های CNC', 'پرس‌های هیدرولیک', 'بالابرها', 'سیستم‌های اتوماسیون', 'ماشین‌آلات سنگین']
-        }
-        // می‌توان سایر محصولات را اضافه کرد
-    ],
-    electrical: [
-        {
-            name: 'الکترو موتورها',
-            desc: 'موتورهای الکتریکی سه فاز',
-            fullDesc: 'الکتروموتورهای سه فاز با کیفیت بالا و راندمان مطلوب برای کاربردهای صنعتی. طیف وسیعی از قدرت‌ها از 0.5 تا 500 کیلووات.',
-            features: ['راندمان بالا', 'مصرف انرژی کم', 'عمر طولانی', 'نصب آسان', 'نگهداری کم'],
-            specs: { brand: 'Siemens, ABB', origin: 'آلمان، سوئد', warranty: '2 سال', status: 'موجود' },
-            applications: ['پمپ‌ها', 'فن‌ها', 'کمپرسورها', 'نوار نقاله', 'میکسرها']
-        }
-    ]
-    // سایر دسته‌بندی‌ها...
-};
-
 function loadProductData() {
-    const productName = decodeURIComponent("<?php echo get_query_var('product_name'); ?>");
-    const categoryName = decodeURIComponent("<?php echo get_query_var('category_name'); ?>");
+    // اطلاعات محصول از main.js بارگذاری می‌شود
+    const productName = "<?php echo get_query_var('product_name'); ?>";
+    const categoryName = "<?php echo get_query_var('category_name'); ?>";
     
-    // پیدا کردن محصول در دیتابیس
-    let foundProduct = null;
-    let categoryKey = '';
-    
-    // تبدیل نام دسته‌بندی به کلید
-    const categoryMap = {
-        'مکانیکی': 'mechanical',
-        'برقی': 'electrical',
-        'ابزار دقیق': 'instruments',
-        'آزمایشگاهی': 'laboratory',
-        'شیمیایی': 'chemicals'
-    };
-    
-    categoryKey = categoryMap[categoryName] || 'mechanical';
-    
-    if (productDatabase[categoryKey]) {
-        foundProduct = productDatabase[categoryKey].find(product => 
-            product.name === productName
-        );
-    }
-    
-    if (foundProduct) {
-        // به‌روزرسانی محتوای صفحه
-        document.getElementById('fullDescription').textContent = foundProduct.fullDesc || foundProduct.desc;
-        
-        // به‌روزرسانی ویژگی‌ها
-        const featuresContainer = document.getElementById('productFeatures');
-        if (foundProduct.features && featuresContainer) {
-            featuresContainer.innerHTML = '';
-            foundProduct.features.forEach(feature => {
-                const li = document.createElement('li');
-                li.textContent = feature;
-                featuresContainer.appendChild(li);
-            });
-        }
-        
-        // به‌روزرسانی مشخصات
-        const specsContainer = document.getElementById('productSpecs');
-        if (foundProduct.specs && specsContainer) {
-            specsContainer.innerHTML = '';
-            Object.entries(foundProduct.specs).forEach(([key, value]) => {
-                const specLabels = {
-                    brand: 'برند',
-                    origin: 'کشور سازنده',
-                    warranty: 'گارانتی',
-                    status: 'وضعیت'
-                };
-                
-                const specItem = document.createElement('div');
-                specItem.className = 'spec-item';
-                specItem.innerHTML = `
-                    <span class="spec-label">${specLabels[key] || key}:</span>
-                    <span class="spec-value">${value}</span>
-                `;
-                specsContainer.appendChild(specItem);
-            });
-        }
-        
-        // به‌روزرسانی کاربردها
-        const applicationsContainer = document.getElementById('productApplications');
-        if (foundProduct.applications && applicationsContainer) {
-            applicationsContainer.innerHTML = '';
-            foundProduct.applications.forEach(application => {
-                const li = document.createElement('li');
-                li.textContent = application;
-                applicationsContainer.appendChild(li);
-            });
-        }
-    }
+    // اینجا می‌توانید اطلاعات دقیق‌تر محصول را از پایگاه داده یا فایل JavaScript بارگذاری کنید
 }
 
 function loadRelatedProducts() {
-    const categoryName = decodeURIComponent("<?php echo get_query_var('category_name'); ?>");
-    const currentProduct = decodeURIComponent("<?php echo get_query_var('product_name'); ?>");
     const relatedContainer = document.getElementById('relatedProducts');
-    
-    const categoryMap = {
-        'مکانیکی': 'mechanical',
-        'برقی': 'electrical',
-        'ابزار دقیق': 'instruments',
-        'آزمایشگاهی': 'laboratory',
-        'شیمیایی': 'chemicals'
-    };
-    
-    const categoryKey = categoryMap[categoryName] || 'mechanical';
-    
-    if (productDatabase[categoryKey] && relatedContainer) {
-        const relatedProducts = productDatabase[categoryKey]
-            .filter(product => product.name !== currentProduct)
-            .slice(0, 3); // فقط 3 محصول مرتبط
-            
-        relatedContainer.innerHTML = '';
-        
-        relatedProducts.forEach(product => {
-            const productCard = document.createElement('div');
-            productCard.className = 'related-product-card';
-            productCard.innerHTML = `
-                <div class="related-product-image">
-                    <img src="<?php echo get_template_directory_uri(); ?>/assets/images/products/product-placeholder.jpg" alt="${product.name}">
-                </div>
-                <div class="related-product-info">
-                    <h4>${product.name}</h4>
-                    <p>${product.desc}</p>
-                    <a href="/product/${encodeURIComponent(categoryName)}/${encodeURIComponent(product.name)}/" class="related-product-link">
-                        مشاهده جزئیات
-                    </a>
-                </div>
-            `;
-            relatedContainer.appendChild(productCard);
-        });
-    }
+    // محصولات مرتبط را اینجا بارگذاری می‌کنیم
 }
 </script>
 
