@@ -53,19 +53,16 @@ Version: 2.0
     --gradient-sunset: linear-gradient(135deg, #ec4899, #f97316, #eab308);
     
     /* Border Radius */
-    --radius-sm: 10px;
-    --radius-md: 16px;
-    --radius-lg: 24px;
-    --radius-xl: 40px;
+    --radius-sm: 8px;
+    --radius-md: 12px;
+    --radius-lg: 20px;
+    --radius-xl: 32px;
     
-    /* Modern Shadows */
-    --shadow-sm: 0 4px 12px rgba(0, 0, 0, 0.18);
-    --shadow-md: 0 12px 40px rgba(0, 0, 0, 0.28);
-    --shadow-lg: 0 25px 70px rgba(0, 0, 0, 0.4);
-    --shadow-glow-blue: 0 0 35px rgba(30, 64, 175, 0.4);
-    --shadow-glow-purple: 0 0 35px rgba(124, 58, 237, 0.35);
-    --shadow-glow-pink: 0 0 35px rgba(236, 72, 153, 0.3);
-    --shadow-glow-mint: 0 0 30px rgba(16, 185, 129, 0.25);
+    /* Shadows */
+    --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.15);
+    --shadow-md: 0 8px 30px rgba(0, 0, 0, 0.25);
+    --shadow-lg: 0 20px 60px rgba(0, 0, 0, 0.35);
+    --shadow-glow: 0 0 30px rgba(99, 102, 241, 0.3);
 }
 
 /* Reset & Base Styles */
@@ -123,13 +120,14 @@ body {
 }
 
 .logo {
-    font-size: 1.8rem;
-    font-weight: 700;
-    background: var(--gradient-primary);
+    font-size: 2rem;
+    font-weight: 800;
+    background: var(--gradient-secondary);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
-    letter-spacing: -0.5px;
+    letter-spacing: -0.8px;
+    text-shadow: 0 2px 20px rgba(124, 58, 237, 0.3);
 }
 
 .nav-menu {
