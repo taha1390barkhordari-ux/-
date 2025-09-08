@@ -525,9 +525,7 @@ function arontara_add_product_query_vars($vars) {
 }
 
 // Template redirect for product pages
-add_action('template_redirect', 'arontara_product_template_redirect');
-
-function arontara_product_template_redirect() {
+function arontara_template_redirect() {
     $category = get_query_var('product_category');
     $product_id = get_query_var('product_id');
     
@@ -541,6 +539,7 @@ function arontara_product_template_redirect() {
         exit;
     }
 }
+add_action('template_redirect', 'arontara_template_redirect');
 
 // Flush rewrite rules on theme activation
 add_action('after_switch_theme', 'arontara_flush_product_rewrite_rules');
