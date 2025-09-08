@@ -9,31 +9,31 @@ Version: 2.0
 @import url('https://cdn.jsdelivr.net/gh/rastikerdar/vazirmatn@v33.003/Vazirmatn-font-face.css');
 
 :root {
-    /* Modern Blue-Purple-Pink-Mint Color Palette */
-    --primary-blue: #1e40af;
-    --secondary-purple: #7c3aed;
-    --accent-pink: #ec4899;
-    --mint-green: #10b981;
-    --soft-cyan: #06b6d4;
-    --lavender: #c084fc;
-    --rose: #f43f5e;
-    --success-color: #059669;
-    --warning-color: #d97706;
-    --error-color: #dc2626;
+    /* Modern Vibrant Color Palette */
+    --primary-blue: #3b82f6;
+    --secondary-purple: #a855f7;
+    --accent-pink: #f472b6;
+    --mint-green: #34d399;
+    --soft-cyan: #22d3ee;
+    --lavender: #ddd6fe;
+    --rose: #fb7185;
+    --success-color: #10b981;
+    --warning-color: #fbbf24;
+    --error-color: #ef4444;
     
     /* Background Colors */
-    --dark-bg: #0a0a15;
-    --darker-bg: #050509;
-    --card-bg: rgba(30, 64, 175, 0.08);
-    --glass-bg: rgba(124, 58, 237, 0.12);
-    --overlay-bg: rgba(10, 10, 21, 0.85);
-    --light-glass: rgba(192, 132, 252, 0.06);
+    --dark-bg: #f8fafc;
+    --darker-bg: #ffffff;
+    --card-bg: rgba(59, 130, 246, 0.08);
+    --glass-bg: rgba(168, 85, 247, 0.12);
+    --overlay-bg: rgba(248, 250, 252, 0.95);
+    --light-glass: rgba(221, 214, 254, 0.25);
     
     /* Text Colors */
-    --text-light: rgba(255, 255, 255, 0.96);
-    --text-muted: rgba(255, 255, 255, 0.78);
-    --text-dim: rgba(255, 255, 255, 0.62);
-    --text-accent: #c084fc;
+    --text-light: #1e293b;
+    --text-muted: #475569;
+    --text-dim: #64748b;
+    --text-accent: #a855f7;
     
     /* Glass & Effects */
     --glass-border: rgba(192, 132, 252, 0.25);
