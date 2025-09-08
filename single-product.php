@@ -528,17 +528,155 @@ document.addEventListener('DOMContentLoaded', function() {
     loadRelatedProducts();
 });
 
+// دیتابیس محصولات مشابه main.js
+const productDatabase = {
+    mechanical: [
+        { 
+            name: 'بیرینگ های غلتکی', 
+            desc: 'تامین و تعمیر انواع بیرینگ های صنعتی', 
+            fullDesc: 'بیرینگ‌های غلتکی یکی از مهم‌ترین قطعات مکانیکی در صنایع مختلف هستند. ما انواع بیرینگ‌های ساچمه‌ای، استوانه‌ای، مخروطی و تراست را با برندهای معتبر بین‌المللی ارائه می‌دهیم.',
+            features: ['مقاومت بالا در برابر فشار', 'عمر طولانی', 'کارایی بالا', 'نصب آسان', 'نگهداری کم'],
+            specs: { brand: 'SKF, FAG, NSK', origin: 'آلمان، ژاپن', warranty: '2 سال', status: 'موجود' },
+            applications: ['پمپ‌های صنعتی', 'کمپرسورها', 'فن‌های صنعتی', 'گیربکس‌ها', 'موتورهای الکتریکی']
+        },
+        { 
+            name: 'پمپ های هیدرولیک', 
+            desc: 'پمپ های هیدرولیک و لوازم یدکی', 
+            fullDesc: 'پمپ‌های هیدرولیک با کیفیت بالا برای سیستم‌های هیدرولیک صنعتی. شامل پمپ‌های دندانه‌ای، پیستونی و پره‌ای با فشار کاری تا 350 بار.',
+            features: ['فشار کاری بالا', 'راندمان بالا', 'صدای کم', 'مقاوم در برابر فرسایش', 'طراحی فشرده'],
+            specs: { brand: 'Rexroth, Parker', origin: 'آلمان، آمریکا', warranty: '18 ماه', status: 'موجود' },
+            applications: ['دستگاه‌های CNC', 'پرس‌های هیدرولیک', 'بالابرها', 'سیستم‌های اتوماسیون', 'ماشین‌آلات سنگین']
+        }
+        // می‌توان سایر محصولات را اضافه کرد
+    ],
+    electrical: [
+        {
+            name: 'الکترو موتورها',
+            desc: 'موتورهای الکتریکی سه فاز',
+            fullDesc: 'الکتروموتورهای سه فاز با کیفیت بالا و راندمان مطلوب برای کاربردهای صنعتی. طیف وسیعی از قدرت‌ها از 0.5 تا 500 کیلووات.',
+            features: ['راندمان بالا', 'مصرف انرژی کم', 'عمر طولانی', 'نصب آسان', 'نگهداری کم'],
+            specs: { brand: 'Siemens, ABB', origin: 'آلمان، سوئد', warranty: '2 سال', status: 'موجود' },
+            applications: ['پمپ‌ها', 'فن‌ها', 'کمپرسورها', 'نوار نقاله', 'میکسرها']
+        }
+    ]
+    // سایر دسته‌بندی‌ها...
+};
+
 function loadProductData() {
-    // اطلاعات محصول از main.js بارگذاری می‌شود
-    const productName = "<?php echo get_query_var('product_name'); ?>";
-    const categoryName = "<?php echo get_query_var('category_name'); ?>";
+    const productName = decodeURIComponent("<?php echo get_query_var('product_name'); ?>");
+    const categoryName = decodeURIComponent("<?php echo get_query_var('category_name'); ?>");
     
-    // اینجا می‌توانید اطلاعات دقیق‌تر محصول را از پایگاه داده یا فایل JavaScript بارگذاری کنید
+    // پیدا کردن محصول در دیتابیس
+    let foundProduct = null;
+    let categoryKey = '';
+    
+    // تبدیل نام دسته‌بندی به کلید
+    const categoryMap = {
+        'مکانیکی': 'mechanical',
+        'برقی': 'electrical',
+        'ابزار دقیق': 'instruments',
+        'آزمایشگاهی': 'laboratory',
+        'شیمیایی': 'chemicals'
+    };
+    
+    categoryKey = categoryMap[categoryName] || 'mechanical';
+    
+    if (productDatabase[categoryKey]) {
+        foundProduct = productDatabase[categoryKey].find(product => 
+            product.name === productName
+        );
+    }
+    
+    if (foundProduct) {
+        // به‌روزرسانی محتوای صفحه
+        document.getElementById('fullDescription').textContent = foundProduct.fullDesc || foundProduct.desc;
+        
+        // به‌روزرسانی ویژگی‌ها
+        const featuresContainer = document.getElementById('productFeatures');
+        if (foundProduct.features && featuresContainer) {
+            featuresContainer.innerHTML = '';
+            foundProduct.features.forEach(feature => {
+                const li = document.createElement('li');
+                li.textContent = feature;
+                featuresContainer.appendChild(li);
+            });
+        }
+        
+        // به‌روزرسانی مشخصات
+        const specsContainer = document.getElementById('productSpecs');
+        if (foundProduct.specs && specsContainer) {
+            specsContainer.innerHTML = '';
+            Object.entries(foundProduct.specs).forEach(([key, value]) => {
+                const specLabels = {
+                    brand: 'برند',
+                    origin: 'کشور سازنده',
+                    warranty: 'گارانتی',
+                    status: 'وضعیت'
+                };
+                
+                const specItem = document.createElement('div');
+                specItem.className = 'spec-item';
+                specItem.innerHTML = `
+                    <span class="spec-label">${specLabels[key] || key}:</span>
+                    <span class="spec-value">${value}</span>
+                `;
+                specsContainer.appendChild(specItem);
+            });
+        }
+        
+        // به‌روزرسانی کاربردها
+        const applicationsContainer = document.getElementById('productApplications');
+        if (foundProduct.applications && applicationsContainer) {
+            applicationsContainer.innerHTML = '';
+            foundProduct.applications.forEach(application => {
+                const li = document.createElement('li');
+                li.textContent = application;
+                applicationsContainer.appendChild(li);
+            });
+        }
+    }
 }
 
 function loadRelatedProducts() {
+    const categoryName = decodeURIComponent("<?php echo get_query_var('category_name'); ?>");
+    const currentProduct = decodeURIComponent("<?php echo get_query_var('product_name'); ?>");
     const relatedContainer = document.getElementById('relatedProducts');
-    // محصولات مرتبط را اینجا بارگذاری می‌کنیم
+    
+    const categoryMap = {
+        'مکانیکی': 'mechanical',
+        'برقی': 'electrical',
+        'ابزار دقیق': 'instruments',
+        'آزمایشگاهی': 'laboratory',
+        'شیمیایی': 'chemicals'
+    };
+    
+    const categoryKey = categoryMap[categoryName] || 'mechanical';
+    
+    if (productDatabase[categoryKey] && relatedContainer) {
+        const relatedProducts = productDatabase[categoryKey]
+            .filter(product => product.name !== currentProduct)
+            .slice(0, 3); // فقط 3 محصول مرتبط
+            
+        relatedContainer.innerHTML = '';
+        
+        relatedProducts.forEach(product => {
+            const productCard = document.createElement('div');
+            productCard.className = 'related-product-card';
+            productCard.innerHTML = `
+                <div class="related-product-image">
+                    <img src="<?php echo get_template_directory_uri(); ?>/assets/images/products/product-placeholder.jpg" alt="${product.name}">
+                </div>
+                <div class="related-product-info">
+                    <h4>${product.name}</h4>
+                    <p>${product.desc}</p>
+                    <a href="/product/${encodeURIComponent(categoryName)}/${encodeURIComponent(product.name)}/" class="related-product-link">
+                        مشاهده جزئیات
+                    </a>
+                </div>
+            `;
+            relatedContainer.appendChild(productCard);
+        });
+    }
 }
 </script>
 
