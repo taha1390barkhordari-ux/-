@@ -19,7 +19,7 @@
                     <a href="https://t.me/arontara" target="_blank" aria-label="Telegram">
                         ✈️
                     </a>
-                    <a href="https://wa.me/+989106126859" target="_blank" aria-label="WhatsApp">
+                    <a href="https://wa.me/989106168590" target="_blank" aria-label="WhatsApp">
                         📱
                     </a>
                 </div>
