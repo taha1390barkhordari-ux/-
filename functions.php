@@ -422,7 +422,7 @@ function arontara_disable_emojis() {
     remove_filter('comment_text_rss', 'wp_staticize_emoji');
     remove_filter('wp_mail', 'wp_staticize_emoji_for_email');
 }
-add_action('init', 'arontara_disable_emojis');
+add_action('init', 'arontara_disable_emojis');\n\n// Floating Contact Buttons\nfunction add_floating_contacts() {\n    ?>\n    <div class=\"floating-contact\">\n        <a href=\"tel:09106168590\" class=\"contact-btn phone\" title=\"تماس مستقیم\">\n            📞\n        </a>\n        <a href=\"https://wa.me/989106168590\" target=\"_blank\" class=\"contact-btn whatsapp\" title=\"واتساپ\">\n            💬\n        </a>\n    </div>\n    <button class=\"back-to-top\" id=\"backToTop\" title=\"بازگشت به بالا\">\n        ↑\n    </button>\n    <script>\n        // Back to top functionality\n        window.addEventListener('scroll', function() {\n            const backToTop = document.getElementById('backToTop');\n            if (window.pageYOffset > 300) {\n                backToTop.classList.add('visible');\n            } else {\n                backToTop.classList.remove('visible');\n            }\n        });\n        \n        document.getElementById('backToTop').addEventListener('click', function() {\n            window.scrollTo({\n                top: 0,\n                behavior: 'smooth'\n            });\n        });\n    </script>\n    <?php\n}\nadd_action('wp_footer', 'add_floating_contacts');
 
 // Add Persian date support
 function arontara_persian_date($format = 'Y/m/d', $timestamp = null) {
