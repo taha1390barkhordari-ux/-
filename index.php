@@ -283,14 +283,14 @@ function initSlider() {
 function initProducts() {
     const products = {
         mechanical: [
-            { name: 'بیرینگ های غلتکی', desc: 'تامین و تعمیر انواع بیرینگ های صنعتی', img: '<?php echo get_template_directory_uri(); ?>/images/bearing.jpg' },
-            { name: 'پمپ های هیدرولیک', desc: 'پمپ های هیدرولیک و لوازم یدکی', img: '<?php echo get_template_directory_uri(); ?>/images/hydraulic-pump.jpg' },
-            { name: 'موتورهای هیدرولیک', desc: 'موتورهای هیدرولیک و قطعات جانبی', img: '<?php echo get_template_directory_uri(); ?>/images/hydraulic-motor.jpg' },
-            { name: 'فن های صنعتی', desc: 'انواع فن های صنعتی و تهویه', img: '<?php echo get_template_directory_uri(); ?>/images/industrial-fan.jpg' },
-            { name: 'جک های هیدرولیک', desc: 'جک های هیدرولیک و لوازم یدکی', img: '<?php echo get_template_directory_uri(); ?>/images/hydraulic-jack.jpg' },
-            { name: 'کوپلینگ های هیدرولیک', desc: 'کوپلینگ ها و اتصالات هیدرولیک', img: '<?php echo get_template_directory_uri(); ?>/images/coupling.jpg' },
-            { name: 'مبدل های حرارتی', desc: 'مبدل های حرارتی تیوب و پلیت', img: '<?php echo get_template_directory_uri(); ?>/images/heat-exchanger.jpg' },
-            { name: 'فیلترهای هیدرولیک', desc: 'فیلترهای صنعتی و تعویضی', img: '<?php echo get_template_directory_uri(); ?>/images/hydraulic-filter.jpg' }
+            { name: 'بیرینگ های غلتکی', desc: 'تامین و تعمیر انواع بیرینگ های صنعتی', img: '<?php echo get_template_directory_uri(); ?>/images/bearing.jpg', link: '<?php echo home_url("/product/mechanical/bearing/"); ?>' },
+            { name: 'پمپ های هیدرولیک', desc: 'پمپ های هیدرولیک و لوازم یدکی', img: '<?php echo get_template_directory_uri(); ?>/images/hydraulic-pump.jpg', link: '<?php echo home_url("/product/mechanical/hydraulic-pump/"); ?>' },
+            { name: 'موتورهای هیدرولیک', desc: 'موتورهای هیدرولیک و قطعات جانبی', img: '<?php echo get_template_directory_uri(); ?>/images/hydraulic-motor.jpg', link: '<?php echo home_url("/product/mechanical/hydraulic-motor/"); ?>' },
+            { name: 'فن های صنعتی', desc: 'انواع فن های صنعتی و تهویه', img: '<?php echo get_template_directory_uri(); ?>/images/industrial-fan.jpg', link: '<?php echo home_url("/product/mechanical/industrial-fan/"); ?>' },
+            { name: 'جک های هیدرولیک', desc: 'جک های هیدرولیک و لوازم یدکی', img: '<?php echo get_template_directory_uri(); ?>/images/hydraulic-jack.jpg', link: '<?php echo home_url("/product/mechanical/hydraulic-jack/"); ?>' },
+            { name: 'کوپلینگ های هیدرولیک', desc: 'کوپلینگ ها و اتصالات هیدرولیک', img: '<?php echo get_template_directory_uri(); ?>/images/coupling.jpg', link: '<?php echo home_url("/product/mechanical/coupling/"); ?>' },
+            { name: 'مبدل های حرارتی', desc: 'مبدل های حرارتی تیوب و پلیت', img: '<?php echo get_template_directory_uri(); ?>/images/heat-exchanger.jpg', link: '<?php echo home_url("/product/mechanical/heat-exchanger/"); ?>' },
+            { name: 'فیلترهای هیدرولیک', desc: 'فیلترهای صنعتی و تعویضی', img: '<?php echo get_template_directory_uri(); ?>/images/hydraulic-filter.jpg', link: '<?php echo home_url("/product/mechanical/hydraulic-filter/"); ?>' }
         ],
         electrical: [
             { name: 'الکترو موتورها', desc: 'موتورهای الکتریکی سه فاز', img: '<?php echo get_template_directory_uri(); ?>/images/electric-motor.jpg' },
