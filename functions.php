@@ -37,7 +37,6 @@ function arontara_theme_setup() {
     add_image_size('gallery-thumb', 400, 300, true);
 }
 add_action('after_setup_theme', 'arontara_theme_setup');
-add_action('template_redirect', 'arontara_template_redirect');
 
 // Enqueue styles and scripts
 function arontara_enqueue_assets() {
@@ -510,44 +509,7 @@ add_action('init', 'arontara_add_product_rewrite_rules');
 
 function arontara_add_product_rewrite_rules() {
     add_rewrite_rule(
-        '^product/([^/]+)/([^/]+)/?
-
-// Add query vars for product pages
-add_filter('query_vars', 'arontara_add_product_query_vars');
-
-function arontara_add_product_query_vars($vars) {
-    $vars[] = 'product_category';
-    $vars[] = 'product_id';
-    return $vars;
-}
-
-// Template redirect for product pages
-add_action('template_redirect', 'arontara_product_template_redirect');
-
-function arontara_product_template_redirect() {
-    $category = get_query_var('product_category');
-    $product_id = get_query_var('product_id');
-    
-    if ($category && $product_id) {
-        // Set query vars for the template
-        set_query_var('category', $category);
-        set_query_var('product_id', $product_id);
-        
-        // Load the single product template
-        include(get_template_directory() . '/single-product.php');
-        exit;
-    }
-}
-
-// Flush rewrite rules on theme activation
-add_action('after_switch_theme', 'arontara_flush_product_rewrite_rules');
-
-function arontara_flush_product_rewrite_rules() {
-    arontara_add_product_rewrite_rules();
-    flush_rewrite_rules();
-}
-
-?>,
+        '^product/([^/]+)/([^/]+)/?,
         'index.php?product_category=$matches[1]&product_id=$matches[2]',
         'top'
     );
