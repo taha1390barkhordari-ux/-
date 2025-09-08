@@ -2,205 +2,150 @@
 <footer class="footer">
     <div class="container">
         <div class="footer-content">
-            <!-- Company Info -->
             <div class="footer-section">
-                <h3>شرکت آرون تارا</h3>
-                <p><strong>شرکت سهامی خاص آرون تارا</strong></p>
-                <p>شماره ثبت: 17575</p>
-                <p>شناسه ملی: 14010013177</p>
-                <p>تأسیس: 20/02/1400</p>
-                <p>مدیرعامل: خانم سمیه منعمی</p>
+                <h3>شرکت سهامی خاص آرون تارا</h3>
+                <p><strong>شماره ثبت:</strong> 17575</p>
+                <p><strong>شناسه ملی:</strong> 14010013177</p>
+                <p><strong>تاریخ تأسیس:</strong> 20/02/1400</p>
+                <p><strong>مدیرعامل:</strong> خانم سمیه منعمی</p>
+                
+                <div class="social-links">
+                    <a href="https://instagram.com/arontara" target="_blank" aria-label="Instagram">
+                        📷
+                    </a>
+                    <a href="https://linkedin.com/company/arontara" target="_blank" aria-label="LinkedIn">
+                        💼
+                    </a>
+                    <a href="https://t.me/arontara" target="_blank" aria-label="Telegram">
+                        ✈️
+                    </a>
+                    <a href="https://wa.me/+989106126859" target="_blank" aria-label="WhatsApp">
+                        📱
+                    </a>
+                </div>
             </div>
             
-            <!-- Contact Info -->
             <div class="footer-section">
                 <h3>اطلاعات تماس</h3>
-                <p>📍 کرمان، خیابان امام جمعه، کوچه 18، پلاک 47</p>
-                <p>📮 کد پستی: 7619635359</p>
-                <p>📞 تلفن: <a href="tel:034-32476351">034-32476351-2</a></p>
-                <p>📠 فکس: 034-32473605</p>
-                <p>📱 مدیرعامل: <a href="tel:091061268590">091061268590</a></p>
+                <p><strong>آدرس:</strong><br>
+                کرمان، خیابان امام جمعه<br>
+                کوچه شماره 18، پلاک 47</p>
+                <p><strong>کد پستی:</strong> 7619635359</p>
+                <p><strong>تلفن:</strong> <a href="tel:034-32476351">034-32476351-2</a></p>
+                <p><strong>فکس:</strong> 034-32473605</p>
+                <p><strong>موبایل مدیرعامل:</strong><br>
+                <a href="tel:091061268590">091061268590</a></p>
             </div>
             
-            <!-- Services -->
             <div class="footer-section">
                 <h3>خدمات ما</h3>
-                <ul>
+                <ul style="list-style: none; padding: 0;">
                     <li><a href="#products">تجهیزات مکانیکی</a></li>
                     <li><a href="#products">تجهیزات برقی</a></li>
                     <li><a href="#products">ابزار دقیق</a></li>
                     <li><a href="#products">تجهیزات آزمایشگاهی</a></li>
                     <li><a href="#products">مواد شیمیایی</a></li>
+                    <li><a href="#services">خدمات پس از فروش</a></li>
                 </ul>
             </div>
             
-            <!-- Quick Links -->
+            <div class="footer-section">
+                <h3>شرکای تجاری</h3>
+                <ul style="list-style: none; padding: 0; font-size: 0.9rem;">
+                    <li>شرکت فولاد زرند ایرانیان</li>
+                    <li>شرکت فولاد سیرجان ایرانیان</li>
+                    <li>شرکت ملی صنایع مس ایران</li>
+                    <li>شرکت سنگ آهن مرکزی ایران</li>
+                    <li>شرکت معادن زغالسنگ کرمان</li>
+                    <li>شرکت بابک مس ایرانیان</li>
+                    <li>شرکت سیمان ممتازان</li>
+                    <li><a href="#about" style="color: #4CAF50;">و بیش از 20 شریک دیگر...</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-section">
+                <h3>محصولات ویژه</h3>
+                <ul style="list-style: none; padding: 0;">
+                    <li><strong>فلوکولانت:</strong><br>
+                    آنیونی و کاتیونی</li>
+                    <li><strong>PAX:</strong><br>
+                    پتانسیم امیل اگزانتات</li>
+                    <li><strong>MIBC:</strong><br>
+                    متیل ایزوبوتیل کربونیل</li>
+                    <li><strong>تیتانیوم دی‌اکسید:</strong><br>
+                    رنگدانه صنعتی</li>
+                    <li><strong>رنگ‌های صنعتی:</strong><br>
+                    ساختمانی و صنعتی</li>
+                </ul>
+            </div>
+            
             <div class="footer-section">
                 <h3>دسترسی سریع</h3>
-                <ul>
+                <ul style="list-style: none; padding: 0;">
+                    <li><a href="#hero">صفحه اصلی</a></li>
                     <li><a href="#about">درباره ما</a></li>
                     <li><a href="#services">خدمات</a></li>
                     <li><a href="#products">محصولات</a></li>
                     <li><a href="#contact">تماس با ما</a></li>
                 </ul>
                 
-                <!-- Social Media -->
-                <div class="social-links">
-                    <a href="#" aria-label="اینستاگرام" target="_blank" rel="noopener">📷</a>
-                    <a href="#" aria-label="لینکدین" target="_blank" rel="noopener">💼</a>
-                    <a href="#" aria-label="تلگرام" target="_blank" rel="noopener">✈️</a>
-                    <a href="mailto:info@arontara.com" aria-label="ایمیل">✉️</a>
+                <div style="margin-top: 1.5rem;">
+                    <h4 style="color: #4CAF50; font-size: 1rem; margin-bottom: 0.5rem;">ساعات کاری</h4>
+                    <p style="font-size: 0.9rem;">
+                        شنبه تا چهارشنبه: 8:00 - 17:00<br>
+                        پنج‌شنبه: 8:00 - 13:00<br>
+                        جمعه: تعطیل
+                    </p>
                 </div>
             </div>
         </div>
         
-        <!-- Partners Section -->
-        <div class="footer-partners">
-            <h3>شرکای تجاری ما</h3>
-            <div class="partners-list">
-                <span>شرکت فولاد زرند ایرانیان</span>
-                <span>شرکت فولاد سیرجان ایرانیان</span>
-                <span>شرکت ملی صنایع مس ایران</span>
-                <span>شرکت سنگ آهن مرکزی ایران</span>
-                <span>شرکت معادن زغالسنگ کرمان</span>
-                <span>شرکت بابک مس ایرانیان</span>
-                <span>شرکت برق منطقه‌ای کرمان</span>
-                <span>شرکت سیمان ممتازان</span>
-            </div>
-        </div>
-        
-        <!-- Copyright -->
         <div class="copyright">
-            <p>&copy; <?php echo date('Y'); ?> شرکت سهامی خاص آرون تارا. تمامی حقوق محفوظ است.</p>
-            <p>طراحی و توسعه با ❤️ توسط تیم فنی آرون تارا</p>
+            <p>
+                © <?php echo date('Y'); ?> شرکت سهامی خاص آرون تارا. تمامی حقوق محفوظ است.
+                <br>
+                <small>طراحی و توسعه با ❤️ برای آینده‌ای بهتر</small>
+            </p>
         </div>
     </div>
 </footer>
 
 <!-- Back to Top Button -->
 <button id="backToTop" class="back-to-top" aria-label="بازگشت به بالا">
-    ⬆️
+    ↑
 </button>
 
-<!-- Contact Modal -->
-<div id="contactModal" class="contact-modal">
-    <div class="modal-content">
-        <div class="modal-header">
-            <h3>تماس سریع</h3>
-            <button class="modal-close" id="modalClose">&times;</button>
-        </div>
-        <div class="modal-body">
-            <form id="quickContactForm">
-                <div class="form-group">
-                    <input type="text" name="quick_name" placeholder="نام و نام خانوادگی" required>
-                </div>
-                <div class="form-group">
-                    <input type="tel" name="quick_phone" placeholder="شماره تماس" required>
-                </div>
-                <div class="form-group">
-                    <textarea name="quick_message" placeholder="پیام شما" rows="3" required></textarea>
-                </div>
-                <button type="submit" class="cta-button">ارسال پیام</button>
-            </form>
-        </div>
-    </div>
+<!-- Contact Float Button -->
+<div class="floating-contact">
+    <a href="tel:091061268590" class="float-button phone" aria-label="تماس تلفنی">
+        📞
+    </a>
+    <a href="https://wa.me/+989106126859" class="float-button whatsapp" aria-label="واتساپ">
+        📱
+    </a>
 </div>
 
 <?php wp_footer(); ?>
 
 <style>
-/* Footer Partners */
-.footer-partners {
-    margin: 3rem 0 2rem;
-    padding: 2rem;
-    background: rgba(76, 175, 80, 0.1);
-    border-radius: 20px;
-    border: 1px solid rgba(76, 175, 80, 0.2);
-}
-
-.footer-partners h3 {
-    text-align: center;
-    margin-bottom: 1.5rem;
-    color: #4CAF50;
-    font-size: 1.5rem;
-}
-
-.partners-list {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 1rem;
-    justify-content: center;
-}
-
-.partners-list span {
-    background: rgba(255, 255, 255, 0.1);
-    padding: 0.5rem 1rem;
-    border-radius: 25px;
-    font-size: 0.9rem;
-    border: 1px solid rgba(76, 175, 80, 0.3);
-    transition: all 0.3s ease;
-}
-
-.partners-list span:hover {
-    background: rgba(76, 175, 80, 0.2);
-    transform: translateY(-2px);
-}
-
-/* Footer Sections */
-.footer-section ul {
-    list-style: none;
-    padding: 0;
-}
-
-.footer-section ul li {
-    margin-bottom: 0.5rem;
-}
-
-.footer-section ul li a {
-    color: #cccccc;
-    text-decoration: none;
-    padding: 0.25rem 0;
-    display: inline-block;
-    transition: all 0.3s ease;
-    position: relative;
-}
-
-.footer-section ul li a::before {
-    content: '◀ ';
-    color: #4CAF50;
-    opacity: 0;
-    transform: translateX(10px);
-    transition: all 0.3s ease;
-}
-
-.footer-section ul li a:hover::before {
-    opacity: 1;
-    transform: translateX(0);
-}
-
-.footer-section ul li a:hover {
-    color: #4CAF50;
-    padding-right: 1rem;
-}
-
 /* Back to Top Button */
 .back-to-top {
     position: fixed;
-    bottom: 30px;
-    left: 30px;
+    bottom: 20px;
+    left: 20px;
     width: 50px;
     height: 50px;
     background: linear-gradient(45deg, #4CAF50, #45a049);
+    color: white;
     border: none;
     border-radius: 50%;
-    color: white;
-    font-size: 1.5rem;
+    font-size: 20px;
     cursor: pointer;
     opacity: 0;
     visibility: hidden;
     transition: all 0.3s ease;
     z-index: 1000;
-    box-shadow: 0 5px 15px rgba(76, 175, 80, 0.4);
+    box-shadow: 0 4px 15px rgba(76, 175, 80, 0.3);
 }
 
 .back-to-top.visible {
@@ -209,152 +154,158 @@
 }
 
 .back-to-top:hover {
-    transform: translateY(-3px) scale(1.1);
-    box-shadow: 0 8px 25px rgba(76, 175, 80, 0.6);
+    transform: translateY(-3px);
+    box-shadow: 0 8px 25px rgba(76, 175, 80, 0.4);
 }
 
-/* Contact Modal */
-.contact-modal {
+/* Floating Contact Buttons */
+.floating-contact {
     position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.8);
-    backdrop-filter: blur(10px);
+    bottom: 20px;
+    right: 20px;
     display: flex;
-    justify-content: center;
-    align-items: center;
-    z-index: 10000;
-    opacity: 0;
-    visibility: hidden;
-    transition: all 0.3s ease;
+    flex-direction: column;
+    gap: 10px;
+    z-index: 1000;
 }
 
-.contact-modal.active {
-    opacity: 1;
-    visibility: visible;
-}
-
-.modal-content {
-    background: linear-gradient(135deg, #2c2c2c, #1a1a1a);
-    border-radius: 20px;
-    border: 1px solid rgba(76, 175, 80, 0.3);
-    min-width: 400px;
-    max-width: 90vw;
-    max-height: 90vh;
-    overflow: hidden;
-    transform: scale(0.8) translateY(50px);
-    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.contact-modal.active .modal-content {
-    transform: scale(1) translateY(0);
-}
-
-.modal-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 1.5rem;
-    border-bottom: 1px solid rgba(76, 175, 80, 0.2);
-    background: rgba(76, 175, 80, 0.1);
-}
-
-.modal-header h3 {
-    margin: 0;
-    color: #4CAF50;
-}
-
-.modal-close {
-    background: none;
-    border: none;
-    color: #4CAF50;
-    font-size: 1.5rem;
-    cursor: pointer;
-    padding: 0.5rem;
+.float-button {
+    width: 50px;
+    height: 50px;
     border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    font-size: 20px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
     transition: all 0.3s ease;
+    animation: pulse 2s infinite;
 }
 
-.modal-close:hover {
-    background: rgba(76, 175, 80, 0.2);
-    transform: rotate(90deg);
+.float-button.phone {
+    background: linear-gradient(45deg, #4CAF50, #45a049);
 }
 
-.modal-body {
-    padding: 2rem;
+.float-button.whatsapp {
+    background: linear-gradient(45deg, #25D366, #1ebe57);
 }
 
-/* Responsive Footer */
+.float-button:hover {
+    transform: translateY(-3px) scale(1.1);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.4);
+    animation: none;
+}
+
+@keyframes pulse {
+    0%, 100% {
+        transform: scale(1);
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+    }
+    50% {
+        transform: scale(1.05);
+        box-shadow: 0 8px 25px rgba(0, 0, 0, 0.4);
+    }
+}
+
+/* Footer Enhancements */
+.footer-section ul {
+    line-height: 1.8;
+}
+
+.footer-section ul li {
+    margin-bottom: 0.5rem;
+    padding-right: 1rem;
+    position: relative;
+}
+
+.footer-section ul li::before {
+    content: '▶';
+    position: absolute;
+    right: 0;
+    color: #4CAF50;
+    font-size: 0.8rem;
+}
+
+/* Responsive Adjustments */
 @media (max-width: 768px) {
     .footer-content {
         grid-template-columns: 1fr;
         text-align: center;
     }
     
-    .partners-list {
-        flex-direction: column;
-        align-items: center;
+    .footer-section {
+        margin-bottom: 2rem;
+        padding-bottom: 2rem;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
     }
     
-    .partners-list span {
-        width: 100%;
-        text-align: center;
+    .footer-section:last-child {
+        border-bottom: none;
+    }
+    
+    .floating-contact {
+        right: 10px;
+        bottom: 10px;
     }
     
     .back-to-top {
-        bottom: 20px;
-        left: 20px;
-        width: 45px;
-        height: 45px;
+        left: 10px;
+        bottom: 10px;
     }
     
-    .modal-content {
-        min-width: 350px;
-        margin: 1rem;
+    .float-button {
+        width: 45px;
+        height: 45px;
+        font-size: 18px;
     }
 }
 
-/* Footer Animation */
-.footer {
-    position: relative;
-    overflow: hidden;
-}
-
+/* Additional Footer Styling */
 .footer::before {
     content: '';
     position: absolute;
     top: 0;
-    left: -100%;
-    width: 100%;
+    left: 0;
+    right: 0;
     height: 2px;
     background: linear-gradient(90deg, transparent, #4CAF50, transparent);
-    animation: footerLine 3s linear infinite;
 }
 
-@keyframes footerLine {
-    0% {
-        left: -100%;
-    }
-    100% {
-        left: 100%;
-    }
+.footer {
+    position: relative;
+    margin-top: 3rem;
 }
 
-/* Loading States */
+/* Enhanced Social Links */
+.social-links a {
+    font-size: 1.2rem;
+    background: linear-gradient(135deg, rgba(76, 175, 80, 0.2), rgba(76, 175, 80, 0.4));
+    border: 1px solid rgba(76, 175, 80, 0.3);
+    backdrop-filter: blur(10px);
+}
+
+.social-links a:hover {
+    background: linear-gradient(135deg, rgba(76, 175, 80, 0.4), rgba(76, 175, 80, 0.6));
+    border-color: #4CAF50;
+    box-shadow: 0 0 20px rgba(76, 175, 80, 0.5);
+}
+
+/* Footer Animation */
 .footer-section {
     opacity: 0;
-    transform: translateY(20px);
-    animation: footerFadeIn 0.6s ease forwards;
+    transform: translateY(30px);
+    animation: fadeInUp 0.8s ease forwards;
 }
 
 .footer-section:nth-child(1) { animation-delay: 0.1s; }
 .footer-section:nth-child(2) { animation-delay: 0.2s; }
 .footer-section:nth-child(3) { animation-delay: 0.3s; }
 .footer-section:nth-child(4) { animation-delay: 0.4s; }
+.footer-section:nth-child(5) { animation-delay: 0.5s; }
+.footer-section:nth-child(6) { animation-delay: 0.6s; }
 
-@keyframes footerFadeIn {
+@keyframes fadeInUp {
     to {
         opacity: 1;
         transform: translateY(0);
@@ -364,11 +315,11 @@
 
 <script>
 document.addEventListener('DOMContentLoaded', function() {
-    // Back to Top Button
+    // Back to Top functionality
     const backToTop = document.getElementById('backToTop');
     
     window.addEventListener('scroll', function() {
-        if (window.pageYOffset > 300) {
+        if (window.scrollY > 300) {
             backToTop.classList.add('visible');
         } else {
             backToTop.classList.remove('visible');
@@ -382,139 +333,46 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
     
-    // Contact Modal
-    const contactModal = document.getElementById('contactModal');
-    const modalClose = document.getElementById('modalClose');
-    const quickContactForm = document.getElementById('quickContactForm');
-    
-    // Open modal with Ctrl+M or when clicking floating contact button
-    document.addEventListener('keydown', function(e) {
-        if (e.ctrlKey && e.key === 'm') {
+    // Enhanced smooth scrolling for footer links
+    document.querySelectorAll('.footer a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function(e) {
             e.preventDefault();
-            contactModal.classList.add('active');
-        }
-        if (e.key === 'Escape') {
-            contactModal.classList.remove('active');
-        }
-    });
-    
-    // Close modal
-    modalClose.addEventListener('click', function() {
-        contactModal.classList.remove('active');
-    });
-    
-    contactModal.addEventListener('click', function(e) {
-        if (e.target === contactModal) {
-            contactModal.classList.remove('active');
-        }
-    });
-    
-    // Quick contact form
-    quickContactForm.addEventListener('submit', function(e) {
-        e.preventDefault();
-        
-        const formData = new FormData(this);
-        const name = formData.get('quick_name');
-        const phone = formData.get('quick_phone');
-        const message = formData.get('quick_message');
-        
-        // Simulate form submission
-        const submitBtn = this.querySelector('.cta-button');
-        const originalText = submitBtn.textContent;
-        
-        submitBtn.textContent = 'در حال ارسال...';
-        submitBtn.disabled = true;
-        
-        setTimeout(() => {
-            submitBtn.textContent = 'ارسال شد ✓';
-            submitBtn.style.background = '#4CAF50';
-            
-            setTimeout(() => {
-                contactModal.classList.remove('active');
-                this.reset();
-                submitBtn.textContent = originalText;
-                submitBtn.disabled = false;
-                submitBtn.style.background = '';
-            }, 2000);
-        }, 1500);
-    });
-    
-    // Social media hover effects
-    const socialLinks = document.querySelectorAll('.social-links a');
-    socialLinks.forEach(link => {
-        link.addEventListener('mouseenter', function() {
-            this.style.transform = 'scale(1.2) rotate(10deg)';
-        });
-        
-        link.addEventListener('mouseleave', function() {
-            this.style.transform = 'scale(1) rotate(0deg)';
+            const target = document.querySelector(this.getAttribute('href'));
+            if (target) {
+                const offsetTop = target.offsetTop - 80; // Account for fixed header
+                window.scrollTo({
+                    top: offsetTop,
+                    behavior: 'smooth'
+                });
+            }
         });
     });
     
-    // Footer sections animation on scroll
+    // Add click tracking for contact buttons (optional for analytics)
+    document.querySelectorAll('.float-button, .footer a[href^="tel:"], .footer a[href^="https://wa.me"]').forEach(button => {
+        button.addEventListener('click', function() {
+            // Optional: Add analytics tracking here
+            console.log('Contact button clicked:', this.getAttribute('href'));
+        });
+    });
+    
+    // Animate footer sections on scroll
     const footerSections = document.querySelectorAll('.footer-section');
-    const observerOptions = {
-        threshold: 0.1,
-        rootMargin: '0px 0px -50px 0px'
-    };
-    
     const footerObserver = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
                 entry.target.style.animationPlayState = 'running';
             }
         });
-    }, observerOptions);
+    }, {
+        threshold: 0.1,
+        rootMargin: '0px 0px -50px 0px'
+    });
     
     footerSections.forEach(section => {
         section.style.animationPlayState = 'paused';
         footerObserver.observe(section);
     });
-    
-    // Partner names animation
-    const partnerSpans = document.querySelectorAll('.partners-list span');
-    partnerSpans.forEach((span, index) => {
-        span.style.animationDelay = `${index * 0.1}s`;
-    });
-    
-    // Add floating contact button
-    const floatingContact = document.createElement('button');
-    floatingContact.innerHTML = '💬';
-    floatingContact.className = 'floating-contact';
-    floatingContact.setAttribute('aria-label', 'تماس سریع');
-    floatingContact.style.cssText = `
-        position: fixed;
-        bottom: 30px;
-        right: 30px;
-        width: 60px;
-        height: 60px;
-        background: linear-gradient(45deg, #4CAF50, #45a049);
-        border: none;
-        border-radius: 50%;
-        color: white;
-        font-size: 1.5rem;
-        cursor: pointer;
-        z-index: 999;
-        box-shadow: 0 5px 15px rgba(76, 175, 80, 0.4);
-        transition: all 0.3s ease;
-        animation: float 3s ease-in-out infinite;
-    `;
-    
-    floatingContact.addEventListener('click', function() {
-        contactModal.classList.add('active');
-    });
-    
-    floatingContact.addEventListener('mouseenter', function() {
-        this.style.transform = 'scale(1.1)';
-        this.style.boxShadow = '0 8px 25px rgba(76, 175, 80, 0.6)';
-    });
-    
-    floatingContact.addEventListener('mouseleave', function() {
-        this.style.transform = 'scale(1)';
-        this.style.boxShadow = '0 5px 15px rgba(76, 175, 80, 0.4)';
-    });
-    
-    document.body.appendChild(floatingContact);
 });
 </script>
 
