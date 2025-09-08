@@ -510,7 +510,7 @@ add_action('init', 'arontara_add_product_rewrite_rules');
 function arontara_add_product_rewrite_rules() {
     add_rewrite_rule(
         '^product/([^/]+)/([^/]+)/?',
-        'index.php?product_category=$matches[1]&product_id=$matches[2]',
+        'index.php?category_name=$matches[1]&product_name=$matches[2]',
         'top'
     );
 }
