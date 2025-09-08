@@ -9,39 +9,48 @@ Version: 2.0
 @import url('https://cdn.jsdelivr.net/gh/rastikerdar/vazirmatn@v33.003/Vazirmatn-font-face.css');
 
 :root {
-    /* Modern Color Palette - Blue Purple Pink */
-    --primary-color: #6366f1;
-    --secondary-color: #8b5cf6;
-    --accent-color: #ec4899;
-    --tertiary-color: #06b6d4;
-    --success-color: #10b981;
-    --warning-color: #f59e0b;
-    --error-color: #ef4444;
+    /* Modern Blue-Purple-Pink-Mint Color Palette */
+    --primary-blue: #1e40af;
+    --secondary-purple: #7c3aed;
+    --accent-pink: #ec4899;
+    --mint-green: #10b981;
+    --soft-cyan: #06b6d4;
+    --lavender: #c084fc;
+    --rose: #f43f5e;
+    --success-color: #059669;
+    --warning-color: #d97706;
+    --error-color: #dc2626;
     
     /* Background Colors */
-    --dark-bg: #0f0f23;
-    --darker-bg: #0a0a1a;
-    --card-bg: rgba(99, 102, 241, 0.08);
-    --glass-bg: rgba(139, 92, 246, 0.12);
-    --overlay-bg: rgba(15, 15, 35, 0.85);
+    --dark-bg: #0a0a15;
+    --darker-bg: #050509;
+    --card-bg: rgba(30, 64, 175, 0.08);
+    --glass-bg: rgba(124, 58, 237, 0.12);
+    --overlay-bg: rgba(10, 10, 21, 0.85);
+    --light-glass: rgba(192, 132, 252, 0.06);
     
     /* Text Colors */
-    --text-light: rgba(255, 255, 255, 0.95);
-    --text-muted: rgba(255, 255, 255, 0.75);
-    --text-dim: rgba(255, 255, 255, 0.6);
+    --text-light: rgba(255, 255, 255, 0.96);
+    --text-muted: rgba(255, 255, 255, 0.78);
+    --text-dim: rgba(255, 255, 255, 0.62);
+    --text-accent: #c084fc;
     
     /* Glass & Effects */
-    --glass-border: rgba(236, 72, 153, 0.25);
-    --shadow-primary: rgba(99, 102, 241, 0.3);
-    --shadow-secondary: rgba(139, 92, 246, 0.25);
-    --shadow-accent: rgba(236, 72, 153, 0.2);
+    --glass-border: rgba(192, 132, 252, 0.25);
+    --mint-border: rgba(16, 185, 129, 0.3);
+    --shadow-blue: rgba(30, 64, 175, 0.35);
+    --shadow-purple: rgba(124, 58, 237, 0.3);
+    --shadow-pink: rgba(236, 72, 153, 0.25);
+    --shadow-mint: rgba(16, 185, 129, 0.2);
     
-    /* Gradients */
-    --gradient-primary: linear-gradient(135deg, #6366f1, #8b5cf6);
-    --gradient-secondary: linear-gradient(135deg, #8b5cf6, #ec4899);
-    --gradient-accent: linear-gradient(135deg, #ec4899, #f97316);
-    --gradient-hero: linear-gradient(135deg, #0f0f23, #1e1b4b, #581c87);
-    --gradient-card: linear-gradient(145deg, rgba(99, 102, 241, 0.1), rgba(139, 92, 246, 0.05));
+    /* Modern Gradients */
+    --gradient-primary: linear-gradient(135deg, #1e40af, #7c3aed, #ec4899);
+    --gradient-secondary: linear-gradient(135deg, #7c3aed, #c084fc, #06b6d4);
+    --gradient-accent: linear-gradient(135deg, #ec4899, #f43f5e, #10b981);
+    --gradient-hero: linear-gradient(135deg, #0a0a15, #1e1b4b, #4c1d95, #ec4899);
+    --gradient-card: linear-gradient(145deg, rgba(30, 64, 175, 0.12), rgba(124, 58, 237, 0.08));
+    --gradient-mint: linear-gradient(135deg, #10b981, #06b6d4);
+    --gradient-sunset: linear-gradient(135deg, #ec4899, #f97316, #eab308);
     
     /* Border Radius */
     --radius-sm: 8px;
